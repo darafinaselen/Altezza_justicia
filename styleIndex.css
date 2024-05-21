@@ -1,15 +1,412 @@
 *{
     text-decoration: none;
     margin: 0;
-    padding: 0px;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body{
-    margin:0px;
+    margin: 0px;
     padding: 0px;
     font-family: sans-serif;
 }
 
-/* nav{
+nav{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    line-height: 10px;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    background: #FFFFFF;
+    z-index: 1;
+    border-bottom: 1px solid #8F2D2A;
 
+}
+nav .wrapper{
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 10px;
+}
+
+.wrapper{
+    width: 1100px;
+    margin: auto;
+    position: relative;
+}
+
+
+.logo img{
+    width: 80px;
+    height: auto;
+}
+
+.menu{
+    /* float: left; */
+    display: flex;
+    /* align-items: center; */
+    margin-left: 20px;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+}
+
+nav ul li{
+    /* float: left; */
+    margin-right: 20px;
+}
+
+nav ul li a{
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding: 0px 16px 0px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    text-decoration: none;
+    color: #8F2D2A;
+}
+
+.login{
+    display: flex;
+    align-items: center;
+    /* float: right; */
+    margin-left: auto;
+} 
+
+.masuk{
+    background: #8F2D2A;
+    border-radius: 8px;
+    padding: 10px 15px 10px 15px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    cursor: pointer;
+}
+.masuk:hover{
+    text-decoration: none;
+    background-color: #E3A2A0;
+}
+
+section{
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* /* #home {
+    background-color: #43b217;
+    /* flex-direction: column; 
 } */
+
+/* #artikel {
+    padding: 20px 0;
+    background-color: #7a2929;
+    /* flex-direction: column; */
+/* } */ 
+
+.tengahCenter{
+    width: 100%;
+}
+
+.kolom{
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+h1{
+    color: #344646;
+    font-family: Inter;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -1.6px;
+}
+
+p.tengah{
+    color: #344646;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 36px */
+}
+
+.square{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-shrink: 0; */
+    justify-content: space-around;
+    background-color: #FFE4D1;
+    border-radius: 10px;
+}
+
+.option{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 10%;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    /* flex-basis: calc(100% / 6 - 20px); */
+}
+
+.lingkaran img{
+    /* width: 90px;
+    height: 90px; */
+    max-width: 100%;
+    height:auto;
+}
+.lingkaran{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: #E3A2A0;
+    padding: 5px;
+}
+
+.ket{
+    padding: 5px;
+    margin-top: 10px;
+    min-height: 30px;
+}
+
+.profile, .Gmail, .Reception, .Ask, .Address, .Lawyer{
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 95%; /* 22.8px */
+    /* padding: 5;
+    justify-content: center;
+    flex-direction: column; */
+}
+
+.profile:hover, .Gmail:hover, .Reception:hover, .Ask:hover, .Address:hover, .Lawyer:hover{
+   cursor: pointer;
+   color: #8F2D2A;
+   transition: color 0.3s ease;
+}
+
+.kolom1{
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+h3{
+    color: #344646;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 60px */
+}
+
+.artikelBox{
+    /* width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
+    grid-gap: 20px;
+}
+
+.box {
+    /* width: 100%;
+    margin: 10px; */
+    padding: 10px;
+    /* background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+}
+
+.boxAtas img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.boxBawah {
+    align-items: center;
+    text-align: justify;
+    /* padding-top: 5px; */
+    text-decoration: none;
+    color: black;
+}
+
+.boxBawah h4 {
+    color: #000;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.boxBawah p {
+    color: #344646;
+    font-family: Inter;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.regisLawyer{
+    background-color: #E3A2A0;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    line-height: 80px;
+    padding: 50px 0;
+}
+
+.tulisan{
+    color: #344646;
+    text-align: center;
+}
+
+.tulisan h3{
+    /* Heading */
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%; /* 44px */
+}
+
+.tulisan .tengah{
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 36px */
+}
+
+.registerTombol{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+} 
+
+.daftar{
+    background: #8F2D2A;
+    border-radius: 8px;
+    padding: 10px 15px 10px 15px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    cursor: pointer;
+}
+.daftar:hover{
+    text-decoration: none;
+    border: 2px solid #FFFFFF;
+}
+
+.footer{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    border-top: 1px solid #8F2D2A;
+    margin: 0;
+    padding: 30px;
+}
+
+.logo-footer img{
+    width: 20%;
+    height: auto;
+    display: flex;
+}
+
+.logo-footer a{
+    display: flex;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 400;
+    color: black;
+    font-style: normal;
+    line-height: 150%; /* 36px */
+    align-items: center;
+}
+.logo-footer{
+    display: flex;
+    align-items: center;
+}
+
+.iconMedsos{
+    padding: 30px 0px 30px 10px;
+    display: flex;
+}
+
+.footer-section-logo ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 20;
+    overflow: hidden;
+    display: flex;
+}
+.footer-section-logo img{
+    padding-right: 10px;
+}
+
+.footer-section-menu{
+    padding: 15px 20px 15px 100px;
+    display: flex;
+}
+.topic ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+}
+
+.topic ul li a{
+    text-decoration: none;
+    color: black;
+    font-family: Inter;
+    font-size: 16px;
+    padding: 5px 0px;
+    display: block; 
+}
+
+.item{
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0 50px;
+}
+.item h4{
+    padding: 10px;
+    font-family: Inter;
+    font-size: 16px;
+}
