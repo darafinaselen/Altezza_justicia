@@ -410,3 +410,17 @@ h3{
     font-family: Inter;
     font-size: 16px;
 }
+
+.hai{
+    display: flex;
+    align-items: center;
+    margin-left: auto; 
+    text-align: right;
+    color: #344646;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.96px;
+}
