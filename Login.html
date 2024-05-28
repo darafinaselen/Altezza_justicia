@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Menetapkan encoding karakter dan viewport untuk responsivitas -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in</title>
+    <!-- Link ke file CSS eksternal untuk styling -->
     <link rel="stylesheet" href="Login.css">
 </head>
 <body>
-    
+    <!-- Pembungkus utama untuk form login dan register -->
     <div class="wrapperLogin">
+        <!-- Tombol close icon menggunakan ion-icon -->
         <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+        <!-- Form login -->
         <div id="loginForm">
             <div class="form-box login">
                 <h3>Login</h3>
+                <!-- Form login dengan method POST -->
                 <form action="login.php" method="POST" name="input">
+                    <!-- Input email -->
                     <div class="input-box">
                         <span class="icon"><ion-icon name="mail"></ion-icon></span>
                         <input type="email" required name="email">
                         <label>Email</label>
                     </div>
+                    <!-- Input password -->
                     <div class="input-box">
                         <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
                         <input type="password" required name="password">
                         <label>Password</label>
                     </div>
+                    <!-- Remember me checkbox dan link forgot password -->
                     <div class="remember-forgot">
                         <label><input type="checkbox">Remember me</label>
                         <a href="#">Forgot Password?</a>
                     </div>
+                    <!-- Tombol submit untuk login -->
                     <button type="submit" class="btn" name="input" value="input">Login</button>
                     <div class="login-register">
                     <p>Don't have an account?<a href="#" class="register-link"> Sign Up</a></p>
@@ -35,31 +44,37 @@
                 </form>
             </div>
 
-            <!-- <div id="RegisForm"> -->
+            <!-- Form sign up -->
             <div class="form-box register">
                 <h3>Sign Up</h3>
+                <!-- Form sign up dengan method POST -->
                 <form action="register.php" method="POST" name="input">
+                    <!-- Input username -->
                     <div class="input-box">
                         <span class="icon"><ion-icon name="person"></ion-icon></span>
                         <input type="text" name="username" required>
                         <label>Username</label>
                     </div>
                     
+                    <!-- Input email -->
                     <div class="input-box">
                         <span class="icon"><ion-icon name="mail"></ion-icon></span>
                         <input type="email" name="email" required>
                         <label>Email</label>
                     </div>
                     
+                    <!-- Input password -->
                     <div class="input-box">
                         <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
                         <input type="password" name="password" required>
                         <label>Password</label>
                     </div>
 
+                    <!-- Checkbox terms and conditions -->
                     <div class="remember-forgot">
                         <label><input type="checkbox">Agree to the terms and conditions</label>
                     </div>
+                    <!-- Tombol submit untuk sign up -->
                     <button type="submit" class="btn">Sign Up</button>
                     <div class="login-register">
                     <p>Already have an account?<a href="#" class="login-link"> Login</a></p>
@@ -71,7 +86,9 @@
         </div>
     </div>
 
+    <!-- Menyertakan file JavaScript untuk interaksi -->
     <script src="proses.js"></script>
+    <!-- Menyertakan ion-icons untuk ikon -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     
