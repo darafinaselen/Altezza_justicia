@@ -57,7 +57,7 @@ session_start();
                             <img src="Assets/Gmail Logo.png">
                         </div>
                         <div class="ket">
-                            <p><a href="online_consultation.php" class="Gmail" id="">Online Consultation</a></p>
+                            <p><a href="onlineConsultation.php" class="Gmail" id="">Online Consultation</a></p>
                         </div>
                     </div>
 
@@ -164,7 +164,7 @@ session_start();
             <P class="tengah">click here for register as a lawyer</P>
         </div>
         <div class="registerTombol">
-            <a href="" class="daftar" id="">Register</a>
+            <a href="lawyerRegister.php" class="daftar" id="">Register</a>
         </div>
     </div>
 
