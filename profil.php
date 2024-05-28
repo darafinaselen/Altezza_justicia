@@ -10,6 +10,7 @@ session_start();
         <title>Profile</title>
         <link rel="stylesheet" href="profil.css">
 </head>
+
 <body>
     <nav>
     <div class="wrapper">

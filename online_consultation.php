@@ -17,7 +17,7 @@ session_start();
         <div class="logo"><a href=""><img src="Assets/logo altezza 2.png"></a></div>
         <div class="menu">
             <ul>
-                <li><a href="index.html">Home</a> <b> > </b> </li>
+                <li><a href="homeLog.php">Home</a> <b> > </b> </li>
                 <li><a href="online_consultation.php">Online Consultation</a></li>
             </ul>
         </div>
@@ -31,12 +31,18 @@ session_start();
                 ?>
         </div>
 </nav>
-<!-- <main>
+
+<main>
     <div class="wrapper">
-      <p>You can contact a lawyer for two times in a week (30 minutes per session) for free. Please contact us on WhatsApp for online consultation.</p>
-      <a href="https://www.whatsapp.com/">(Whatsapp)</a>
+        <div class = option>
+        <h1>Online Consultation</h1>
+        <p id = "p1" >Consulation through a platform that allows users to interact with lawyers anywhere and at any time.</p>
+        <p id="p2">You can contact a lawyer two times a week (30 minutes per session) for <span class="red-text">free</span>.</p>
+        <p id = "p3" ><b>Please contact us on WhatsApp for online consultation</b></p>
+        <a href="https://www.whatsapp.com/" class="box">WhatsApp</a>
     </div>
-  </main> -->
+    </div>
+</main>
 
   <!-- Footer -->
   <div class="wrapper">
