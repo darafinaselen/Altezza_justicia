@@ -11,7 +11,7 @@ session_start();
     <link rel="stylesheet" href="onlineConsultation.css">
 </head>
 
-<body>
+<body>    
 <nav>
     <div class="wrapper">
         <div class="logo"><a href=""><img src="Assets/logo altezza 2.png"></a></div>

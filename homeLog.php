@@ -18,7 +18,7 @@ session_start();
             <div class="logo"><a href=""><img src="Assets/logo altezza 2.png"></a></div>
             <div class="menu">
                 <ul>
-                    <li><a href="#home">Home</a></li>
+                    <li><a href="homeLog.php">Home</a></li>
                     <!-- <li><a href="#artikel">Artikel</a></li> -->
                 </ul>
             </div>
@@ -66,7 +66,7 @@ session_start();
                             <img src="Assets/Reception.png">
                         </div>
                         <div class="ket">
-                            <p><a href="" class="Reception" id="">Create Appointment</a></p>
+                            <p><a href="CreatAppoitment.php" class="Reception" id="">Create Appointment</a></p>
                         </div>
                     </div>
 
@@ -93,7 +93,7 @@ session_start();
                             <img src="Assets/Lawyer.png">
                         </div>
                         <div class="ket">
-                            <p><a href="" class="Lawyer" id="">Lawyer Office</a></p>
+                            <p><a href="LawyerList.php" class="Lawyer" id="">Lawyer List</a></p>
                         </div>
                     </div>
 

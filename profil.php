@@ -17,7 +17,7 @@ session_start();
         <div class="logo"><a href=""><img src="Assets/logo altezza 2.png"></a></div>
         <div class="menu">
             <ul>
-                <li><a href="index.html">Home</a> <b> > </b> </li>
+                <li><a href="homeLog.php">Home</a> <b> > </b> </li>
                 <li><a href="profil.php">Profil</a></li>
             </ul>
         </div>
