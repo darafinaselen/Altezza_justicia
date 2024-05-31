@@ -57,7 +57,7 @@ session_start();
                             <img src="Assets/Gmail Logo.png">
                         </div>
                         <div class="ket">
-                            <p><a href="" class="Gmail" id="">Online Consultation</a></p>
+                            <p><a href="online_consultation.php" class="Gmail" id="">Online Consultation</a></p>
                         </div>
                     </div>
 
