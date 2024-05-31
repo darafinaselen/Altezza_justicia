@@ -48,7 +48,7 @@ session_start();
                             <img src="Assets/Male User.png">
                         </div>
                         <div class="ket">
-                            <p><a href="" class="profile" id="">profile</a></p>
+                            <p><a href="profil.php" class="profile" id="">profile</a></p>
                         </div>
                     </div>
 
@@ -66,7 +66,7 @@ session_start();
                             <img src="Assets/Reception.png">
                         </div>
                         <div class="ket">
-                            <p><a href="" class="Reception" id="">Create Appointment</a></p>
+                            <p><a href="CreateAppoitment.php" class="Reception" id="">Create Appointment</a></p>
                         </div>
                     </div>
 
