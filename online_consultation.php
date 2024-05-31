@@ -39,7 +39,7 @@ session_start();
         <p id = "p1" >Consulation through a platform that allows users to interact with lawyers anywhere and at any time.</p>
         <p id="p2">You can contact a lawyer two times a week (30 minutes per session) for <span class="red-text">free</span>.</p>
         <p id = "p3" ><b>Please contact us on WhatsApp for online consultation</b></p>
-        <a href="https://www.whatsapp.com/" class="box">WhatsApp</a>
+        <a href="https://wa.me/6287845033099" class="box">WhatsApp</a>
     </div>
     </div>
 </main>
