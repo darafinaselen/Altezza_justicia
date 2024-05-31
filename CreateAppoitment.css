@@ -129,6 +129,40 @@ h1 {
     letter-spacing: -1.6px;
 }
 
+.wraper {
+    display: flex;
+    justify-content: center; /* Pusatkan secara horizontal */
+    align-items: center; /* Pusatkan secara vertikal jika diperlukan */
+    /* height: 100vh; */
+}
+
+.option {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.box {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid #000; /* Warna border hitam */
+    border-radius: 5px; /* Sudut border membulat */
+    background-color: #f0f0f0; /* Warna latar belakang abu-abu terang */
+    text-decoration: none; /* Menghapus garis bawah pada link */
+    color: #000; /* Warna teks hitam */
+    margin-top: 10px; /* Menambahkan jarak 10px di atas kotak */
+}
+
+/* Tambahkan gaya untuk link saat di-hover */
+.box:hover {
+    background-color: #e0e0e0;
+    border-color: #555;
+}
+
+/* Tambahkan gaya untuk link saat diklik */
+.box:active {
+    background-color: #ccc; 
+    border-color: #333; 
+} 
 
 .footer{
     width: 100%;

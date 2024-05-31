@@ -146,6 +146,12 @@ p.tengah {
     background-color: #FFE4D1;
     border-radius: 10px;
     margin-bottom: 20px;
+    cursor: pointer; /* Menambahkan kursor pointer untuk menunjukkan elemen clickable */
+    transition: background-color 0.3s;
+}
+
+.square:hover {
+    background-color: #FFB899; /* Warna latar belakang berubah saat hover */
 }
 
 .option {

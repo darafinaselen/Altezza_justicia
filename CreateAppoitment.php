@@ -39,8 +39,14 @@ session_start();
                 <h1>Our Consultant Team</h1>
             </div>
         </div>
+
+        <div class="option">
+            <a href="LawyerList.php" class="box"><b>+ New Appointment</b></a>
+        </div>
+</div>
     </section>
 </div>
+
 
 <!-- Footer -->
 <div class="wrapper">

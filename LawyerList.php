@@ -37,21 +37,22 @@ session_start();
             <div class="kolom">
                 <h1>Our Consultant Team</h1>
             </div>
-            <div class="square">
-                <div class="option">
-                    <div class="lingkaran">
-                        <img src="Assets/Dara.jpg" alt="Consultant">
-                    </div>
-                </div>
-                <div class="bio">
-                        <p><b>Dara Finas Elen . SH., MH </b></p>
-                        <p>S1 at Universitas Gadjah Mada</p>
-                        <p>S2 at Harvard University</p>
-                        <p><b>IDR. 500.000/ 2 hours</b></p>
-                        <!-- <p><a href="CreatAppoitment.php" class="Appoitment" id="">Appointment</a></p> -->
-                </div>
-            </div> 
 
+            <div class="square" onclick="window.location.href='Form_Create_Appoitment.php';">
+            <div class="option">
+                <div class="lingkaran">
+                    <img src="Assets/Dara.jpg" alt="Consultant">
+                </div>
+            </div>
+            <div class="bio">
+                <p><b>Dara Finas Elen . SH., MH </b></p>
+                <p>S1 at Universitas Gadjah Mada</p>
+                <p>S2 at Harvard University</p>
+                <p><b>IDR. 500.000/ 2 hours</b></p>
+            </div>
+            </div>
+
+            
             <div class="square">
                 <div class="option">
                     <div class="lingkaran">
@@ -63,7 +64,6 @@ session_start();
                         <p>S1 at Universitas Gadjah Mada</p>
                         <p>S2 at Melbourne University</p>
                         <p><b>IDR. 500.000/ 2 hours</b></p>
-                        <!-- <p><a href="CreatAppoitment.php" class="Appoitment" id="">Appointment</a></p> -->
                 </div>
             </div> 
 
@@ -78,10 +78,31 @@ session_start();
                         <p>S1 at Universitas Gadjah Mada</p>
                         <p>S2 at Oxford University</p>
                         <p><b>IDR. 500.000/ 2 hours</b></p>
-                        <!-- <p><a href="CreatAppoitment.php" class="Appoitment" id="">Appointment</a></p> -->
                 </div>
             </div> 
         </div>
+
+        <script>
+        function selectLawyer(name) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "save_consultant.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    window.location.href = 'Form_Create_Appointment.php';
+                }
+            };
+            xhr.send("consultant_name=" + encodeURIComponent(name));
+            }
+        </script>
+        
+        <?php
+        session_start();
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['consultant_name'])) {
+            $_SESSION['consultant_name'] = $_POST['consultant_name'];
+        }
+        ?>
+
     </section>
 </div>
 
