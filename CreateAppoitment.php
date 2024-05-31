@@ -32,6 +32,16 @@ session_start();
         </div>
 </nav>
 
+<div class="wrapper">
+    <section>
+        <div class="tengahCenter">
+            <div class="kolom">
+                <h1>Our Consultant Team</h1>
+            </div>
+        </div>
+    </section>
+</div>
+
 <!-- Footer -->
 <div class="wrapper">
         <div class="footer">
