@@ -48,7 +48,7 @@ session_start();
                             <img src="Assets/Male User.png">
                         </div>
                         <div class="ket">
-                            <p><a href="profil.php" class="Profile" id="">Profile</a></p>
+                            <p><a href="profil.php" class="profile" id="">Profile</a></p>
                         </div>
                     </div>
 
@@ -93,7 +93,7 @@ session_start();
                             <img src="Assets/Lawyer.png">
                         </div>
                         <div class="ket">
-                            <p><a href="" class="Lawyer" id="">Lawyer Office</a></p>
+                            <p><a href="LawyerList.php" class="Lawyer" id="">Lawyer List</a></p>
                         </div>
                     </div>
 
@@ -215,11 +215,8 @@ session_start();
                         </ul>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
     </div>
 
 </body>

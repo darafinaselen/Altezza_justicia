@@ -1,10 +1,7 @@
-/* Mengatur semua elemen agar tidak ada dekorasi teks, 
-margin dan padding 0, dan menggunakan box-sizing border-box */
 *{
     text-decoration: none;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 /* Mengatur tampilan dasar dari body */
@@ -55,7 +52,7 @@ nav .wrapper{
 }
 
  /* Mengatur elemen dengan class "menu" menggunakan model flexbox */
-nav ul{
+ nav ul{
     display: flex;
     list-style-type: none;
     margin: 0;
@@ -129,40 +126,76 @@ h1 {
     letter-spacing: -1.6px;
 }
 
-.wraper {
+p.tengah {
+    color: #344646;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; 
+}
+
+.square {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    position: relative;
     display: flex;
-    justify-content: center; /* Pusatkan secara horizontal */
-    align-items: center; /* Pusatkan secara vertikal jika diperlukan */
-    /* height: 100vh; */
+    flex-wrap: wrap;
+    justify-content: flex-start; 
+    background-color: #FFE4D1;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    cursor: pointer; /* Menambahkan kursor pointer untuk menunjukkan elemen clickable */
+    transition: background-color 0.3s;
+}
+
+.square:hover {
+    background-color: #FFB899; /* Warna latar belakang berubah saat hover */
 }
 
 .option {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    margin: 10px; 
     padding: 10px;
+    text-align: center;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 
-.box {
-    display: inline-block;
-    padding: 5px 10px;
-    border: 2px solid #000; /* Warna border hitam */
-    border-radius: 5px; /* Sudut border membulat */
-    background-color: #f0f0f0; /* Warna latar belakang abu-abu terang */
-    text-decoration: none; /* Menghapus garis bawah pada link */
-    color: #000; /* Warna teks hitam */
-    margin-top: 10px; /* Menambahkan jarak 10px di atas kotak */
+.lingkaran {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%;
+    background-color: #E3A2A0;
+    overflow: hidden; 
 }
 
-/* Tambahkan gaya untuk link saat di-hover */
-.box:hover {
-    background-color: #e0e0e0;
-    border-color: #555;
-}
-
-/* Tambahkan gaya untuk link saat diklik */
-.box:active {
-    background-color: #ccc; 
-    border-color: #333; 
+.lingkaran img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 } 
+
+.bio {
+    flex: 1; 
+}
+
+.bio p {
+    margin: 10px 0; 
+    font-family: Inter;
+    font-size: 20px; 
+    color: #344646;
+    align-items: center;
+    padding: 5px;
+    margin-left: 10px;
+}
+
 
 .footer{
     width: 100%;

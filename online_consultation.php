@@ -8,7 +8,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width= device-width, initial-scale=1.0">
     <title>Altezza Justicia</title>
-    <link rel="stylesheet" href="online_consultation.css">
+    <link rel="stylesheet" href="Payment.css">
 </head>
 
 <body>
