@@ -122,6 +122,14 @@ nav ul li a:hover{
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
+    color: #333; /* Mengatur warna font label */
+}
+
+.form-group .consultant-name {
+    display: block; /* Pastikan nama konsultan ditampilkan sebagai blok baru di bawah label */
+    margin-top: 5px; /* Tambahkan margin atas untuk spasi antara label dan nama konsultan */
+    font-size: 14px; /* Mengatur ukuran font untuk nama konsultan */
+    color: #666; /* Mengatur warna font untuk nama konsultan */
 }
 
 .form-group input[type="text"],
@@ -134,19 +142,62 @@ nav ul li a:hover{
     border-radius: 5px;
 }
 
+.form-group label {
+    font-size: 16px; /* Mengatur ukuran font label */
+    font-weight: 500; /* Mengatur ketebalan font label */
+    margin-bottom: 5px; /* Menambahkan ruang di bawah label */
+    color: #333; /* Mengatur warna font label */
+}
+
+.form-group input[type="datetime-local"] {
+    width: 100%; /* Mengatur lebar input agar sesuai dengan kontainer */
+    padding: 10px; /* Menambahkan ruang di dalam input */
+    border: 1px solid #ccc; /* Mengatur border input */
+    border-radius: 4px; /* Menambahkan border-radius untuk membuat sudut bulat */
+    font-size: 16px; /* Mengatur ukuran font input */
+    font-family: inherit; /* Menggunakan font yang sama dengan elemen induk */
+    box-sizing: border-box; /* Memastikan padding dan border dihitung dalam lebar dan tinggi total */
+}
+
+.form-group input[type="datetime-local"]:focus {
+    border-color: #8F2D2A; /* Mengubah warna border ketika fokus */
+    outline: none; /* Menghapus outline default */
+    box-shadow: 0 0 5px rgba(143, 45, 42, 0.5); /* Menambahkan bayangan untuk efek fokus */
+}
+
+
 .form-group textarea {
     resize: vertical;
 }
 
-.form-group button[type="submit"] {
-    padding: 10px 20px;
-    background-color: #8F2D2A;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+} 
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+} 
+
+.submit {
+    background: #8F2D2A;
+    border-radius: 8px;
+    padding: 10px 15px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    text-align: center; /* Ensure the text is centered */
+    display: inline-block; /* Make the anchor behave like a button */
     cursor: pointer;
+    border: none; /* Remove the default button border */
+    text-decoration: none; /* Remove underline for anchor */
 }
 
-.form-group button[type="submit"]:hover {
-    background-color: #8F2D2A;
+.pembayaran:hover {
+    background-color: #E3A2A0;
 }
