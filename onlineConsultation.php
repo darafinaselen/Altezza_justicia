@@ -9,7 +9,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width= device-width, initial-scale=1.0">
     <title>Altezza Justicia</title>
-    <link rel="stylesheet" href="lawyerList.css">
+    <link rel="stylesheet" href="onlineConsultation.css">
 </head>
 
 <body>
@@ -19,7 +19,7 @@ session_start();
             <div class="menu">
                 <ul>
                     <li><a href="homeLog.php">Home</a> <b> > </b> </li>
-                    <li><a href="LawyerList.php">Lawyer List</a></li>
+                    <li><a href="onlineConsultation.php">Online Consultation</a></li>
                 </ul>
             </div>
             <div class="hai">
@@ -32,59 +32,23 @@ session_start();
                 ?>
             </div>
     </nav>
-    <div class="wrapper">
-        <section>
-            <div class="tengahCenter">
-                <div class="kolom">
-                    <h1>Our Consultant Team</h1>
-                </div>
-                <div class="square">
-                    <div class="option">
-                        <div class="lingkaran">
-                            <img src="Assets/Dara.jpg" alt="Consultant">
-                        </div>
-                    </div>
-                    <div class="bio">
-                        <p><b>Dara Finas Elen . SH., MH </b></p>
-                        <p>S1 at Universitas Gadjah Mada</p>
-                        <p>S2 at Harvard University</p>
-                        <p><b>IDR. 500.000/ 2 hours</b></p>
-                        <!-- <p><a href="CreatAppoitment.php" class="Appoitment" id="">Appointment</a></p> -->
-                    </div>
-                </div>
 
-                <div class="square">
-                    <div class="option">
-                        <div class="lingkaran">
-                            <img src="Assets/Azkiya.jpg" alt="Consultant">
-                        </div>
-                    </div>
-                    <div class="bio">
-                        <p><b> Nabila Azkiya Rosyida Wijayanti . SH., MH </b></p>
-                        <p>S1 at Universitas Gadjah Mada</p>
-                        <p>S2 at Melbourne University</p>
-                        <p><b>IDR. 500.000/ 2 hours</b></p>
-                        <!-- <p><a href="CreatAppoitment.php" class="Appoitment" id="">Appointment</a></p> -->
-                    </div>
-                </div>
-
-                <div class="square" onclick="window.location.href='Form_Create_Appoitment.php';">
-                    <div class="option">
-                        <div class="lingkaran">
-                            <img src="Assets/Nadya.jpg" alt="Consultant">
-                        </div>
-                    </div>
-                    <div class="bio">
-                        <p><b> Nadya Azzahra . SH., MH </b></p>
-                        <p>S1 at Universitas Gadjah Mada</p>
-                        <p>S2 at Oxford University</p>
-                        <p><b>IDR. 500.000/ 2 hours</b></p>
-                        <!-- <p><a href="CreatAppoitment.php" class="Appoitment" id="">Appointment</a></p> -->
-                    </div>
-                </div>
+    <main>
+        <div class="wrapper">
+            <div class=option>
+                <h1>Online Consultation</h1>
+                <p id="p1">Consulation through a platform that allows users to interact with lawyers anywhere and at any
+                    time.</p>
+                <p id="p2">You can contact a lawyer two times a week (30 minutes per session) for <span
+                        class="red-text">free</span>.</p>
+                <p id="p3"><b>Please contact us on WhatsApp for online consultation</b></p>
+                <<<<<<< HEAD:online_consultation.php <a href="https://wa.me/6287845033099" class="box">WhatsApp</a>
+                    =======
+                    <a href="https://wa.me/087845033099" class="box">WhatsApp</a>
+                    >>>>>>> lawyerRegister:onlineConsultation.php
             </div>
-        </section>
-    </div>
+        </div>
+    </main>
 
     <!-- Footer -->
     <div class="wrapper">
@@ -135,10 +99,12 @@ session_start();
                         </ul>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
 
+            </div>
+
+        </div>
+
+    </div>
 </body>
 
 </html>

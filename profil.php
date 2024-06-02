@@ -50,7 +50,7 @@ session_start();
         </div>
 
         <!-- Footer -->
-        <div class="wrapper">
+  <div class="wrapper">
         <div class="footer">
             <div class="footer-section-logo">
                 <div class="logo-footer"><a href=""><img src="Assets/logo altezza 2.png" />Altezza Justicia</a></div>
@@ -61,48 +61,49 @@ session_start();
                         <li><img src="Assets/IconYtb.svg" alt=""></li>
                         <li><img src="Assets/IconInstg.svg" alt=""></li>
                     </ul>
-
+    
                 </div>
             </div>
             <div class="footer-section-menu">
-                
-            <!-- Menu di bagian footer -->
-            <div class="item">
-                <h4>Topic</h4>
-                <div class="topic">
-                    <ul>
-                        <li><a href="">Page</a></li>
-                        <li><a href="">Page</a></li>
-                        <li><a href="">Page</a></li>
-                    </ul>
+                <!-- Menu di bagian footer -->
+                <div class="item">
+                    <h4>Topic</h4>
+                    <div class="topic">
+                        <ul>
+                            <li><a href="">Page</a></li>
+                            <li><a href="">Page</a></li>
+                            <li><a href="">Page</a></li>
+                        </ul>
+                    </div>
                 </div>
+
+                <div class="item">
+                    <h4>Topic</h4>
+                    <div class="topic">
+                        <ul>
+                            <li><a href="">Page</a></li>
+                            <li><a href="">Page</a></li>
+                            <li><a href="">Page</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <h4>Topic</h4>
+                    <div class="topic">
+                        <ul>
+                            <li><a href="">Page</a></li>
+                            <li><a href="">Page</a></li>
+                            <li><a href="">Page</a></li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="item">
-                <h4>Topic</h4>
-                <div class="topic">
-                    <ul>
-                        <li><a href="">Page</a></li>
-                        <li><a href="">Page</a></li>
-                        <li><a href="">Page</a></li>
-                    </ul>
-                </div>
-            </div>
+        </div>
 
-            <div class="item">
-                <h4>Topic</h4>
-                <div class="topic">
-                    <ul>
-                        <li><a href="">Page</a></li>
-                        <li><a href="">Page</a></li>
-                        <li><a href="">Page</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            </div>
-            </div>
-            </div>
+    </div>
 
 <script src="script.js"></script>
 <script>

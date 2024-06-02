@@ -18,7 +18,7 @@ session_start();
             <div class="logo"><a href=""><img src="Assets/logo altezza 2.png"></a></div>
             <div class="menu">
                 <ul>
-                    <li><a href="#home">Home</a></li>
+                    <li><a href="homeLog.php">Home</a></li>
                     <!-- <li><a href="#artikel">Artikel</a></li> -->
                 </ul>
             </div>
@@ -57,7 +57,7 @@ session_start();
                             <img src="Assets/Gmail Logo.png">
                         </div>
                         <div class="ket">
-                            <p><a href="online_consultation.php" class="Gmail" id="">Online Consultation</a></p>
+                            <p><a href="onlineConsultation.php" class="Gmail" id="">Online Consultation</a></p>
                         </div>
                     </div>
 
@@ -66,7 +66,7 @@ session_start();
                             <img src="Assets/Reception.png">
                         </div>
                         <div class="ket">
-                            <p><a href="CreateAppoitment.php" class="Reception" id="">Create Appointment</a></p>
+                            <p><a href="CreatAppoitment.php" class="Reception" id="">Create Appointment</a></p>
                         </div>
                     </div>
 
@@ -164,7 +164,7 @@ session_start();
             <P class="tengah">click here for register as a lawyer</P>
         </div>
         <div class="registerTombol">
-            <a href="" class="daftar" id="">Register</a>
+            <a href="lawyerRegister.php" class="daftar" id="">Register</a>
         </div>
     </div>
 

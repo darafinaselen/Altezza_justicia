@@ -8,7 +8,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width= device-width, initial-scale=1.0">
     <title>Altezza Justicia</title>
-    <link rel="stylesheet" href="Payment.css">
+    <link rel="stylesheet" href="lawyerRegister.css">
 </head>
 
 <body>
@@ -18,7 +18,7 @@ session_start();
         <div class="menu">
             <ul>
                 <li><a href="homeLog.php">Home</a> <b> > </b> </li>
-                <li><a href="online_consultation.php">Online Consultation</a></li>
+                <li><a href="LawyerRegister.php">Register as Lawyer</a></li>
             </ul>
         </div>
         <div class="hai">
@@ -35,11 +35,13 @@ session_start();
 <main>
     <div class="wrapper">
         <div class = option>
-        <h1>Online Consultation</h1>
-        <p id = "p1" >Consulation through a platform that allows users to interact with lawyers anywhere and at any time.</p>
-        <p id="p2">You can contact a lawyer two times a week (30 minutes per session) for <span class="red-text">free</span>.</p>
-        <p id = "p3" ><b>Please contact us on WhatsApp for online consultation</b></p>
-        <a href="https://wa.me/6287845033099" class="box">WhatsApp</a>
+        <h1>Want to being part of Altezza Justicia?</h1>
+        <p id = "p1" ><b> Let's join us, send your CV and being part for enforcing laws </b></p>
+        <p id = "p2" >✅ help more people who need law consultant</p>
+        <p id = "p3" >✅ flexible work times and locations</p>
+        <p id = "p4" >✅ interesting intensive</p>
+        <a href="https://wa.me/087845033099" class="box">WhatsApp</a> 
+        <a href="mailto:azkiyan533@gmail.com" class="box">Email</a>
     </div>
     </div>
 </main>
