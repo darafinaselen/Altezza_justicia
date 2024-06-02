@@ -66,7 +66,7 @@ session_start();
                             <img src="Assets/Reception.png">
                         </div>
                         <div class="ket">
-                            <p><a href="" class="Reception" id="">Create Appointment</a></p>
+                            <p><a href="CreateAppoitment.php" class="Reception" id="">Create Appointment</a></p>
                         </div>
                     </div>
 
