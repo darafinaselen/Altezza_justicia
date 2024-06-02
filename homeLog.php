@@ -215,13 +215,9 @@ session_start();
                         </ul>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
     </div>
 
 </body>
-
 </html>
