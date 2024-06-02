@@ -1,3 +1,5 @@
+/* Mengatur semua elemen agar tidak ada dekorasi teks, 
+margin dan padding 0, dan menggunakan box-sizing border-box */
 *{
     text-decoration: none;
     margin: 0;
@@ -5,12 +7,14 @@
     box-sizing: border-box;
 }
 
+/* Mengatur tampilan dasar dari body */
 body{
     margin: 0px;
     padding: 0px;
     font-family: sans-serif;
 }
 
+/* Mengatur gaya untuk elemen nav (navigasi) */
 nav{
     width: 100%;
     margin: auto;
@@ -23,8 +27,9 @@ nav{
     background: #FFFFFF;
     z-index: 1;
     border-bottom: 1px solid #8F2D2A;
-
 }
+
+/* Mengatur gaya untuk elemen dengan class wrapper di dalam nav */
 nav .wrapper{
     width: 100%;
     max-width: 1100px;
@@ -35,18 +40,20 @@ nav .wrapper{
     padding: 0 10px;
 }
 
+/* Mengatur gaya untuk elemen dengan class wrapper */
 .wrapper{
     width: 1100px;
     margin: auto;
     position: relative;
 }
 
-
+/* Mengatur gaya untuk elemen img di dalam elemen dengan class logo */
 .logo img{
     width: 80px;
     height: auto;
 }
 
+ /* Mengatur elemen dengan class "menu" menggunakan model flexbox */
 .menu{
     /* float: left; */
     display: flex;
@@ -54,6 +61,7 @@ nav .wrapper{
     margin-left: 20px;
 }
 
+ /* Mengatur elemen dengan class "menu" menggunakan model flexbox */
 nav ul{
     display: flex;
     list-style-type: none;
@@ -62,11 +70,13 @@ nav ul{
     /* overflow: hidden; */
 }
 
+/* Mengatur elemen <li> di dalam <ul> */
 nav ul li{
     /* float: left; */
     margin-right: 20px;
 }
 
+/* Mengatur elemen <a> di dalam <li> */
 nav ul li a{
     color: black;
     font-weight: bold;
@@ -75,11 +85,13 @@ nav ul li a{
     text-decoration: none;
 }
 
+/* Mengatur elemen <a> saat pengguna mengarahkan kursor (hover) */
 nav ul li a:hover{
     text-decoration: none;
     color: #8F2D2A;
 }
 
+/* Mengatur elemen dengan class "login" menggunakan model flexbox */
 .login{
     display: flex;
     align-items: center;
@@ -87,6 +99,7 @@ nav ul li a:hover{
     margin-left: auto;
 } 
 
+/* Mengatur gaya untuk elemen dengan class "masuk" */
 .masuk{
     background: #8F2D2A;
     border-radius: 8px;
@@ -98,11 +111,14 @@ nav ul li a:hover{
     line-height: 100%;
     cursor: pointer;
 }
+
+/* Mengatur gaya elemen dengan class "masuk" saat pengguna mengarahkan kursor (hover) */
 .masuk:hover{
     text-decoration: none;
     background-color: #E3A2A0;
 }
 
+/* Mengatur gaya untuk elemen <section> */
 section{
     width: 100%;
     margin: 0;
@@ -198,7 +214,7 @@ p.tengah{
     min-height: 30px;
 }
 
-.profile, .Gmail, .Reception, .Ask, .Address, .Lawyer{
+.Profile, .Gmail, .Reception, .Ask, .Address, .Lawyer{
     color: #000;
     text-align: center;
     font-family: Inter;
@@ -211,7 +227,7 @@ p.tengah{
     flex-direction: column; */
 }
 
-.profile:hover, .Gmail:hover, .Reception:hover, .Ask:hover, .Address:hover, .Lawyer:hover{
+.Profile:hover, .Gmail:hover, .Reception:hover, .Ask:hover, .Address:hover, .Lawyer:hover{
    cursor: pointer;
    color: #8F2D2A;
    transition: color 0.3s ease;
