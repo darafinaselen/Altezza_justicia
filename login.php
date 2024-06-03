@@ -13,6 +13,7 @@ $result = mysqli_query($conn, $query_sql);
 if (mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_assoc($result);
     $_SESSION['username'] = $row['username'];
+    $_SESSION['id_client'] = $row['id_client'];
     header("Location: homeLog.php");
     exit();
 } else {

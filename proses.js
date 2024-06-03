@@ -14,3 +14,10 @@ loginLink.addEventListener('click', ()=>{
 clossButton.addEventListener('click', () => {
     window.location.href = "index.html";
 });
+
+const phoneNumberInput = document.querySelector('input[name="phone"]');
+phoneNumberInput.addEventListener('focus', () => {
+    if (phoneNumberInput.value.trim() === "") {
+        phoneNumberInput.value = "+62";
+    }
+});

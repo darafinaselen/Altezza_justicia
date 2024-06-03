@@ -48,7 +48,7 @@ session_start();
                             <img src="Assets/Male User.png">
                         </div>
                         <div class="ket">
-                            <p><a href="profil.php" class="profile" id="">Profile</a></p>
+                            <p><a href="profil.php" class="Profile" id="">Profile</a></p>
                         </div>
                     </div>
 
@@ -118,8 +118,7 @@ session_start();
                                     href="https://duniadosen.com/hak-kekayaan-intelektual-memperkuat-menghadapi-masyarakat-ekonomi-asia/">
                                     <h4>Hak Kekayaan Intelektual Memperkuat Menghadapi Masyarakat Ekonomi Asia</h4>
                                     <br>Pentingnya Hak Kekayaan Intelektual (HKI) di kancah MEA (Masyarakat Ekonomi
-                                    Asia) terus diperkenalkan. Tujuannya agar Indonesia tidak menjadi penontong di
-                                    negara sendiri...read more
+                                    Asia) terus diperkenalkan...read more
                                 </a></p>
                         </div>
                     </div>
@@ -133,7 +132,7 @@ session_start();
                                     href="https://www.hukumonline.com/berita/a/tabrak-peraturan--kontrak-batal-demi-hukum-lt4fc583987ab36">
                                     <h4>Tabrak Peraturan, Kontrak Batal Demi Hukum</h4>
                                     <br>Perjanjian kerjasama yang tertuang dalam kontrak seharusnya batal demni hukum
-                                    jika substansi kontrak itu bertentangan dengan peraturan...read more
+                                    jika substansi kontrak itu bertentangan...read more
                                 </a></p>
                         </div>
                     </div>

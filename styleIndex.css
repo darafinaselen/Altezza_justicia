@@ -186,9 +186,10 @@ p.tengah{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 10%;
+    width: 15%;
+    height: 150px;
     margin: auto;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     /* flex-basis: calc(100% / 6 - 20px); */
 }
@@ -206,12 +207,20 @@ p.tengah{
     border-radius: 100%;
     background-color: #E3A2A0;
     padding: 5px;
+    width: 90px; 
+    height: 90px;
+    padding: 5px;
 }
 
 .ket{
     padding: 5px;
     margin-top: 10px;
-    min-height: 30px;
+    min-height: 20px;
+    width: 100%;
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: center;
+    line-break: 1.2;
 }
 
 .Profile, .Gmail, .Reception, .Ask, .Address, .Lawyer{
@@ -266,17 +275,28 @@ h3{
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
 }
+.boxAtas {
+    width: 100%; /* Ensure the image container takes full width of the grid column */
+    height: 200px; /* Set a fixed height for uniformity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #000 1px solid;
+    border-radius: 5px;
+    overflow: hidden; /* Ensure that the image doesn't overflow the container */
+}
 
 .boxAtas img {
     width: 100%;
-    height: auto;
-    border-radius: 5px;
+    height: 200px;
+    object-fit: cover;
+    /* border-radius: 5px; */
 }
 
 .boxBawah {
     align-items: center;
     text-align: justify;
-    /* padding-top: 5px; */
+    padding-top: 5px;
     text-decoration: none;
     color: black;
 }

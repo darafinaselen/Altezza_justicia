@@ -42,10 +42,8 @@ session_start();
                 <p id="p2">You can contact a lawyer two times a week (30 minutes per session) for <span
                         class="red-text">free</span>.</p>
                 <p id="p3"><b>Please contact us on WhatsApp for online consultation</b></p>
-                <<<<<<< HEAD:online_consultation.php <a href="https://wa.me/6287845033099" class="box">WhatsApp</a>
-                    =======
-                    <a href="https://wa.me/087845033099" class="box">WhatsApp</a>
-                    >>>>>>> lawyerRegister:onlineConsultation.php
+                <a href="https://wa.me/6287845033099" class="box">WhatsApp</a>
+                <a href="https://wa.me/087845033099" class="box">WhatsApp</a>
             </div>
         </div>
     </main>
