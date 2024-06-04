@@ -159,9 +159,11 @@ h1{
 
 .file-input {
   margin-bottom: 5px; /* Add space below the file input */
-  /* display:flex; */
+  display:flex;
   flex-direction: column;
-  display: block;
+  /* display: block; */
+  align-items: center;
+  margin: 0 auto;
 }
 
 .profile-info {
@@ -175,6 +177,7 @@ h1{
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  margin: 0 auto;
 }
 
 
