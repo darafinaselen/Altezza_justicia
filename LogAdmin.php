@@ -27,7 +27,7 @@ session_start();
                 if (isset($_SESSION['username'])) {
                     echo '<span class="welcome">Hai, ' . htmlspecialchars($_SESSION['username']) . '!</span>';
                 } else {
-                    echo '<a href="Login.html" class="masuk" id="">Login</a>';
+                    echo '<a href="admin.html" class="masuk" id="">Login</a>';
                 }
                 ?>
             </div>
@@ -48,25 +48,16 @@ session_start();
                             <img src="Assets/Male User.png">
                         </div>
                         <div class="ket">
-                            <p><a href="" class="profile" id="">profile</a></p>
+                            <p><a href="profiladmin.php" class="profile" id="">Profile</a></p>
                         </div>
                     </div>
 
                     <div class="option">
                         <div class="lingkaran">
-                            <img src="Assets/Gmail Logo.png">
+                            <img src="Assets/Find User Male.png">
                         </div>
                         <div class="ket">
-                            <p><a href="" class="Gmail" id="">Online Consultation</a></p>
-                        </div>
-                    </div>
-
-                    <div class="option">
-                        <div class="lingkaran">
-                            <img src="Assets/Reception.png">
-                        </div>
-                        <div class="ket">
-                            <p><a href="" class="Reception" id="">Create Appointment</a></p>
+                            <p><a href="userinfo.php" class="UserInfo" id="">User Information</a></p>
                         </div>
                     </div>
 
@@ -75,28 +66,9 @@ session_start();
                             <img src="Assets/Ask Question.png">
                         </div>
                         <div class="ket">
-                            <p><a href="" class="Ask" id="">Information</a></p>
+                            <p><a href="activity.php" class="Ask" id="">Activity</a></p>
                         </div>
                     </div>
-
-                    <div class="option">
-                        <div class="lingkaran">
-                            <img src="Assets/Address.png">
-                        </div>
-                        <div class="ket">
-                            <p><a href="" class="Address" id="">Nearest Law Office</a></p>
-                        </div>
-                    </div>
-
-                    <div class="option">
-                        <div class="lingkaran">
-                            <img src="Assets/Lawyer.png">
-                        </div>
-                        <div class="ket">
-                            <p><a href="" class="Lawyer" id="">Lawyer Office</a></p>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </section>
@@ -110,17 +82,11 @@ session_start();
                 <div class="artikelBox">
                     <div class="box">
                         <div class="boxAtas">
-                            <img
-                                src="https://duniadosen.com/wp-content/uploads/2017/07/hak-atas-kekayaan-intelektual.jpg">
+                            <img src="https://duniadosen.com/wp-content/uploads/2017/07/hak-atas-kekayaan-intelektual.jpg">
                         </div>
                         <div class="boxBawah">
-                            <p><a
-                                    href="https://duniadosen.com/hak-kekayaan-intelektual-memperkuat-menghadapi-masyarakat-ekonomi-asia/">
-                                    <h4>Hak Kekayaan Intelektual Memperkuat Menghadapi Masyarakat Ekonomi Asia</h4>
-                                    <br>Pentingnya Hak Kekayaan Intelektual (HKI) di kancah MEA (Masyarakat Ekonomi
-                                    Asia) terus diperkenalkan. Tujuannya agar Indonesia tidak menjadi penontong di
-                                    negara sendiri...read more
-                                </a></p>
+                            <p><a href="https://duniadosen.com/hak-kekayaan-intelektual-memperkuat-menghadapi-masyarakat-ekonomi-asia/"><h4>Hak Kekayaan Intelektual Memperkuat Menghadapi Masyarakat Ekonomi Asia</h4>
+                            <br>Pentingnya Hak Kekayaan Intelektual (HKI) di kancah MEA (Masyarakat Ekonomi Asia) terus diperkenalkan. Tujuannya agar Indonesia tidak menjadi penontong di negara sendiri...read more</a></p>
                         </div>
                     </div>
 
@@ -129,34 +95,24 @@ session_start();
                             <img src="https://images.hukumonline.com/frontend/lt4fc583987ab36/lt4fc63a4de32b2.jpg">
                         </div>
                         <div class="boxBawah">
-                            <p><a
-                                    href="https://www.hukumonline.com/berita/a/tabrak-peraturan--kontrak-batal-demi-hukum-lt4fc583987ab36">
-                                    <h4>Tabrak Peraturan, Kontrak Batal Demi Hukum</h4>
-                                    <br>Perjanjian kerjasama yang tertuang dalam kontrak seharusnya batal demni hukum
-                                    jika substansi kontrak itu bertentangan dengan peraturan...read more
-                                </a></p>
+                            <p><a href="https://www.hukumonline.com/berita/a/tabrak-peraturan--kontrak-batal-demi-hukum-lt4fc583987ab36"><h4>Tabrak Peraturan, Kontrak Batal Demi Hukum</h4>
+                            <br>Perjanjian kerjasama yang tertuang dalam kontrak seharusnya batal demni hukum jika substansi kontrak itu bertentangan dengan peraturan...read more</a></p>
                         </div>
                     </div>
 
                     <div class="box">
                         <div class="boxAtas">
-                            <img
-                                src="https://asset.kompas.com/crops/KNdP3s4Lvhlhn0nDA2NUge2kb1w=/195x0:780x390/1200x800/data/photo/2014/12/15/1236290Palu780x390.jpg">
+                            <img src="https://asset.kompas.com/crops/KNdP3s4Lvhlhn0nDA2NUge2kb1w=/195x0:780x390/1200x800/data/photo/2014/12/15/1236290Palu780x390.jpg">
                         </div>
                         <div class="boxBawah">
-                            <p><a
-                                    href="https://money.kompas.com/read/2021/09/02/140317126/mk-tegaskan-eksekusi-jaminan-fidusia-lewat-pengadilan-hanya-alternatif">
-                                    <h4>MK Tegaskan Eksekusi Jaminan Fidusia lewat Pengadilan Hanya Alternatif</h4>
-                                    <br>Mahkamah Konstitusi (MK) menegaskan, eksekusi sertifikat jaminan fidusia melalui
-                                    pengadilan...read more
-                                </a></p>
+                            <p><a href="https://money.kompas.com/read/2021/09/02/140317126/mk-tegaskan-eksekusi-jaminan-fidusia-lewat-pengadilan-hanya-alternatif"><h4>MK Tegaskan Eksekusi Jaminan Fidusia lewat Pengadilan Hanya Alternatif</h4>
+                            <br>Mahkamah Konstitusi (MK) menegaskan, eksekusi sertifikat jaminan fidusia melalui pengadilan...read more</a></p>
                         </div>
                     </div>
-
                 </div>
-            </div>
-        </section>
+            </section>
     </div>
+
     <div class="wrapper">
         <div class="footer">
             <div class="footer-section-logo">

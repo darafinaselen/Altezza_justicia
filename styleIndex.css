@@ -198,7 +198,7 @@ p.tengah{
     min-height: 30px;
 }
 
-.profile, .Gmail, .Reception, .Ask, .Address, .Lawyer{
+.profile, .Gmail, .Reception, .Ask, .Address, .Lawyer, .UserInfo{
     color: #000;
     text-align: center;
     font-family: Inter;
@@ -211,7 +211,7 @@ p.tengah{
     flex-direction: column; */
 }
 
-.profile:hover, .Gmail:hover, .Reception:hover, .Ask:hover, .Address:hover, .Lawyer:hover{
+.profile:hover, .Gmail:hover, .Reception:hover, .Ask:hover, .Address:hover, .Lawyer:hover, .UserInfo:hover{
    cursor: pointer;
    color: #8F2D2A;
    transition: color 0.3s ease;
