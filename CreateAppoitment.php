@@ -72,7 +72,6 @@ session_start();
                         <li><img src="Assets/IconYtb.svg" alt=""></li>
                         <li><img src="Assets/IconInstg.svg" alt=""></li>
                     </ul
-    
                 </div>
             </div>
             <div class="footer-section-menu">
