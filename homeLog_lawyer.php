@@ -9,7 +9,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Altezza Justicia</title>
-    <link rel="stylesheet" href="styleIndex.css">
+    <link rel="stylesheet" href="homeLog_lawyer.css">
 </head>
 
 <body>
@@ -18,8 +18,7 @@ session_start();
             <div class="logo"><a href=""><img src="Assets/logo altezza 2.png"></a></div>
             <div class="menu">
                 <ul>
-                    <li><a href="homeLog.php">Home</a></li>
-                    <!-- <li><a href="#artikel">Artikel</a></li> -->
+                    <li><a href="#home">Home</a></li>
                 </ul>
             </div>
             <div class="hai">
@@ -48,52 +47,16 @@ session_start();
                             <img src="Assets/Male User.png">
                         </div>
                         <div class="ket">
-                            <p><a href="profil.php" class="Profile" id="">Profile</a></p>
+                            <p><a href="profil_lawyer.php" class="profile" id="">Profile</a></p>
                         </div>
                     </div>
 
                     <div class="option">
                         <div class="lingkaran">
-                            <img src="Assets/Gmail Logo.png">
+                            <img src="Assets/Activity.png">
                         </div>
                         <div class="ket">
-                            <p><a href="onlineConsultation.php" class="Gmail" id="">Online Consultation</a></p>
-                        </div>
-                    </div>
-
-                    <div class="option">
-                        <div class="lingkaran">
-                            <img src="Assets/Reception.png">
-                        </div>
-                        <div class="ket">
-                            <p><a href="CreateAppoitment.php" class="Reception" id="">Create Appointment</a></p>
-                        </div>
-                    </div>
-
-                    <div class="option">
-                        <div class="lingkaran">
-                            <img src="Assets/Ask Question.png">
-                        </div>
-                        <div class="ket">
-                            <p><a href="" class="Ask" id="">Information</a></p>
-                        </div>
-                    </div>
-
-                    <div class="option">
-                        <div class="lingkaran">
-                            <img src="Assets/Address.png">
-                        </div>
-                        <div class="ket">
-                            <p><a href="https://maps.app.goo.gl/iewZvPGtvCrmmuyKA" class="Address" id="">Nearest Law Office</a></p>
-                        </div>
-                    </div>
-
-                    <div class="option">
-                        <div class="lingkaran">
-                            <img src="Assets/Lawyer.png">
-                        </div>
-                        <div class="ket">
-                            <p><a href="LawyerList.php" class="Lawyer" id="">Lawyer List</a></p>
+                            <p><a href="schedule_lawyer.php" class="jadwal" id="">Schedule</a></p>
                         </div>
                     </div>
 
@@ -157,17 +120,8 @@ session_start();
         </section>
     </div>
 
-    <div class="regisLawyer">
-        <div class="tulisan">
-            <h3>Are You a Lawyer?</h3>
-            <P class="tengah">click here for register as a lawyer</P>
-        </div>
-        <div class="registerTombol">
-            <a href="lawyerRegister.php" class="daftar" id="">Register</a>
-        </div>
-    </div>
 
-    <div class="wrapper">
+        <div class="wrapper">
         <div class="footer">
             <div class="footer-section-logo">
                 <div class="logo-footer"><a href=""><img src="Assets/logo altezza 2.png" />Altezza Justicia</a></div>
@@ -219,5 +173,4 @@ session_start();
     </div>
 
 </body>
-
 </html>

@@ -43,7 +43,6 @@ session_start();
                         class="red-text">free</span>.</p>
                 <p id="p3"><b>Please contact us on WhatsApp for online consultation</b></p>
                 <a href="https://wa.me/6287845033099" class="box">WhatsApp</a>
-                <a href="https://wa.me/087845033099" class="box">WhatsApp</a>
             </div>
         </div>
     </main>

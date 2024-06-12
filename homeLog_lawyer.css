@@ -2,16 +2,15 @@
     text-decoration: none;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Mengatur tampilan dasar dari body */
 body{
     margin: 0px;
     padding: 0px;
     font-family: sans-serif;
 }
 
-/* Mengatur gaya untuk elemen nav (navigasi) */
 nav{
     width: 100%;
     margin: auto;
@@ -24,10 +23,8 @@ nav{
     background: #FFFFFF;
     z-index: 1;
     border-bottom: 1px solid #8F2D2A;
-    margin-bottom: 20px;
-}
 
-/* Mengatur gaya untuk elemen dengan class wrapper di dalam nav */
+}
 nav .wrapper{
     width: 100%;
     max-width: 1100px;
@@ -38,35 +35,34 @@ nav .wrapper{
     padding: 0 10px;
 }
 
-/* Mengatur gaya untuk elemen dengan class wrapper */
 .wrapper{
     width: 1100px;
     margin: auto;
     position: relative;
 }
 
-/* Mengatur gaya untuk elemen img di dalam elemen dengan class logo */
+
 .logo img{
     width: 80px;
     height: auto;
 }
 
- /* Mengatur elemen dengan class "menu" menggunakan model flexbox */
- nav ul{
+.menu{
+    display: flex;
+    margin-left: 20px;
+}
+
+nav ul{
     display: flex;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    /* overflow: hidden; */
 }
 
-/* Mengatur elemen <li> di dalam <ul> */
 nav ul li{
-    /* float: left; */
     margin-right: 20px;
 }
 
-/* Mengatur elemen <a> di dalam <li> */
 nav ul li a{
     color: black;
     font-weight: bold;
@@ -75,128 +71,197 @@ nav ul li a{
     text-decoration: none;
 }
 
-/* Mengatur elemen <a> saat pengguna mengarahkan kursor (hover) */
 nav ul li a:hover{
     text-decoration: none;
     color: #8F2D2A;
 }
 
-.hai{
-    display: flex;
-    align-items: center;
-    margin-left: auto; 
-    text-align: right;
-    color: #344646;
-    font-family: Inter;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: -0.96px;
-}
-
-/* Mengatur gaya untuk elemen <section> */
-section {
+section{
     width: 100%;
     margin: 0;
-    padding: 10px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 20px 0;
+    display: block;
     margin-top: 10px;
     margin-bottom: 50px;
+    flex-direction: column;
+    align-items: center;
 }
 
-.tengahCenter {
+.tengahCenter{
     width: 100%;
 }
 
-.kolom {
-    margin-top: 20px;
-    margin-bottom: 20px;
+.kolom{
+    margin-top: 30px;
+    margin-bottom: 25px;
 }
 
-h1 {
+h1{
     color: #344646;
     font-family: Inter;
-    font-size: 30px;
+    font-size: 80px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     letter-spacing: -1.6px;
 }
 
-p.tengah {
+p.tengah{
     color: #344646;
     font-family: Inter;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
-    line-height: 150%; 
+    line-height: 150%;
 }
 
-.square {
+.square{
     padding-top: 15px;
     padding-bottom: 15px;
     width: 100%;
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start; 
+    justify-content: space-around;
     background-color: #FFE4D1;
     border-radius: 10px;
-    margin-bottom: 20px;
-    cursor: pointer; /* Menambahkan kursor pointer untuk menunjukkan elemen clickable */
-    transition: background-color 0.3s;
 }
 
-.square:hover {
-    background-color: #FFB899; /* Warna latar belakang berubah saat hover */
-}
-
-.option {
+.option{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    width: auto;
-    margin: 10px; 
-    padding: 10px;
+    width: 10%;
+    margin: auto;
+    padding: 5px;
     text-align: center;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 
-.lingkaran {
-    margin: 20px;
+.lingkaran img{
+    max-width: 100%;
+    height:auto;
+}
+
+.lingkaran{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 150px; 
-    height: 150px;
-    border-radius: 50%;
+    border-radius: 100%;
     background-color: #E3A2A0;
-    overflow: hidden; 
-    border: #344646 1px solid;
+    padding: 5px;
 }
 
-.lingkaran img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} 
+.ket{
+    padding: 5px;
+    margin-top: 10px;
+    min-height: 30px;
+}
 
-.bio {
-    flex: 1; 
+.profile, .daftar, .jadwal{
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 95%;
+}
+
+.profile:hover, .jadwal:hover{
+   cursor: pointer;
+   color: #8F2D2A;
+   transition: color 0.3s ease;
+}
+
+.tengah {
     text-align: left;
+    margin: 0;
 }
 
-.bio p {
-  margin: 10px 0;
-  font-family: Inter;
-  font-size: 20px;
-  color: #344646;
-  padding: 5px;
-  margin-left: 10px;
-  text-align: left ; 
+.kolom1{
+    margin-bottom: 25px;
+}
+
+h2{
+    color: #344646;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.kolom1{
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+h3{
+    color: #344646;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 60px */
+}
+
+.artikelBox{
+    /* width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
+    grid-gap: 20px;
+}
+
+.box {
+    /* width: 100%;
+    margin: 10px; */
+    padding: 10px;
+    /* background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+}
+.boxAtas {
+    width: 100%; /* Ensure the image container takes full width of the grid column */
+    height: 200px; /* Set a fixed height for uniformity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #000 1px solid;
+    border-radius: 5px;
+    overflow: hidden; /* Ensure that the image doesn't overflow the container */
+}
+
+.boxAtas img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    /* border-radius: 5px; */
+}
+
+.boxBawah {
+    align-items: center;
+    text-align: justify;
+    padding-top: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.boxBawah h4 {
+    color: #000;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.boxBawah p {
+    color: #344646;
+    font-family: Inter;
+    font-size: 10px;
+    font-weight: 400;
 }
 
 .footer{
@@ -208,15 +273,15 @@ p.tengah {
     border-top: 1px solid #8F2D2A;
     margin: 0;
     padding: 30px;
-  }
-  
-  .logo-footer img{
+}
+
+.logo-footer img{
     width: 20%;
     height: auto;
     display: flex;
-  }
-  
-  .logo-footer a{
+}
+
+.logo-footer a{
     display: flex;
     font-family: Inter;
     font-size: 24px;
@@ -225,54 +290,54 @@ p.tengah {
     font-style: normal;
     line-height: 150%; /* 36px */
     align-items: center;
-  }
-  .logo-footer{
+}
+.logo-footer{
     display: flex;
     align-items: center;
-  }
-  
-  .iconMedsos{
+}
+
+.iconMedsos{
     padding: 30px 0px 30px 10px;
     display: flex;
-  }
-  
-  .footer-section-logo ul{
+}
+
+.footer-section-logo ul{
     list-style-type: none;
     margin: 0;
     padding: 20;
     overflow: hidden;
     display: flex;
-  }
-  .footer-section-logo img{
+}
+.footer-section-logo img{
     padding-right: 10px;
-  }
-  
-  .footer-section-menu{
+}
+
+.footer-section-menu{
     padding: 15px 20px 15px 100px;
     display: flex;
-  }
-  .topic ul{
+}
+.topic ul{
     list-style-type: none;
     margin: 0;
     padding: 10px;
-  }
-  
-  .topic ul li a{
+}
+
+.topic ul li a{
     text-decoration: none;
     color: black;
     font-family: Inter;
     font-size: 16px;
     padding: 5px 0px;
     display: block; 
-  }
-  
-  .item{
+}
+
+.item{
     flex-wrap: wrap;
     flex-direction: row;
     padding: 0 50px;
-  }
-  .item h4{
+}
+.item h4{
     padding: 10px;
     font-family: Inter;
     font-size: 16px;
-  }
+}

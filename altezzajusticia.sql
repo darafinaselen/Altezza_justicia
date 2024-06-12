@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 31 Bulan Mei 2024 pada 07.52
+-- Waktu pembuatan: 11 Jun 2024 pada 12.52
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.2.4
 
@@ -57,16 +57,19 @@ CREATE TABLE `appoitment` (
 CREATE TABLE `client` (
   `id_client` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
+  `no_telpon` varchar(15) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `password` varchar(8) NOT NULL
+  `password` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `client`
 --
 
-INSERT INTO `client` (`id_client`, `username`, `email`, `password`) VALUES
-(1, 'kuroko', 'kuroko@gmail.com', 'araara');
+INSERT INTO `client` (`id_client`, `username`, `no_telpon`, `email`, `password`) VALUES
+(1, 'Kuroko', '081345678767', 'kuroko@gmail.com', 'araara'),
+(2, 'rara', '087767891123', 'rara@gmail.com', 'doraemon'),
+(3, 'Dafilena Anastasya', '085233467788', 'dararari@gmail.com', 'dadargul');
 
 -- --------------------------------------------------------
 
@@ -75,7 +78,7 @@ INSERT INTO `client` (`id_client`, `username`, `email`, `password`) VALUES
 --
 
 CREATE TABLE `lawyer` (
-  `id_lawyer` int(11) NOT NULL,
+  `id_lawyer` varchar(20) NOT NULL,
   `username` int(50) NOT NULL,
   `password` int(11) NOT NULL,
   `biaya` int(50) NOT NULL,
@@ -121,7 +124,8 @@ ALTER TABLE `appoitment`
 -- Indeks untuk tabel `client`
 --
 ALTER TABLE `client`
-  ADD PRIMARY KEY (`id_client`);
+  ADD PRIMARY KEY (`id_client`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- Indeks untuk tabel `lawyer`
@@ -158,13 +162,7 @@ ALTER TABLE `appoitment`
 -- AUTO_INCREMENT untuk tabel `client`
 --
 ALTER TABLE `client`
-  MODIFY `id_client` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT untuk tabel `lawyer`
---
-ALTER TABLE `lawyer`
-  MODIFY `id_lawyer` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_client` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `payment`
@@ -180,16 +178,14 @@ ALTER TABLE `payment`
 -- Ketidakleluasaan untuk tabel `appoitment`
 --
 ALTER TABLE `appoitment`
-  ADD CONSTRAINT `fk_client_appoitment` FOREIGN KEY (`id_client`) REFERENCES `client` (`id_client`),
-  ADD CONSTRAINT `fk_lawyer_appoitment` FOREIGN KEY (`id_lawyer`) REFERENCES `lawyer` (`id_lawyer`);
+  ADD CONSTRAINT `fk_client_appoitment` FOREIGN KEY (`id_client`) REFERENCES `client` (`id_client`);
 
 --
 -- Ketidakleluasaan untuk tabel `payment`
 --
 ALTER TABLE `payment`
   ADD CONSTRAINT `fk_admin_payment` FOREIGN KEY (`id_admin`) REFERENCES `admin` (`id_admin`),
-  ADD CONSTRAINT `fk_client_payment` FOREIGN KEY (`id_client`) REFERENCES `client` (`id_client`),
-  ADD CONSTRAINT `fk_lawyer_payment` FOREIGN KEY (`id_lawyer`) REFERENCES `lawyer` (`id_lawyer`);
+  ADD CONSTRAINT `fk_client_payment` FOREIGN KEY (`id_client`) REFERENCES `client` (`id_client`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -40,10 +40,22 @@ session_start();
             </div>
         </div>
 
-        <div class="option">
-            <a href="LawyerList.php" class="box"><b>+ New Appointment</b></a>
+        <div class="square">
+            <div class="option">
+                <img src="Assets/Timeline Week.png" class="gambar">
+                <div class="text-container">
+                    <div class="ket">
+                        <p>Name : </p>
+                        <p>Valid Until : </p>
+                        <p>Status : </p>
+                    </div>
+                </div>
+            </div>
         </div>
-</div>
+
+        <div class="option">
+            <a href="LawyerList.php" class="box appointment-button"><b>+ New Appointment</b></a>
+        </div>
     </section>
 </div>
 
@@ -59,7 +71,7 @@ session_start();
                         <li><img src="Assets/Iconlinkdin.svg" alt=""></li>
                         <li><img src="Assets/IconYtb.svg" alt=""></li>
                         <li><img src="Assets/IconInstg.svg" alt=""></li>
-                    </ul>
+                    </ul
     
                 </div>
             </div>

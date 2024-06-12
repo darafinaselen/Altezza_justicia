@@ -98,71 +98,99 @@ nav ul li a:hover{
     letter-spacing: -0.96px;
 }
 
-/* Mengatur gaya untuk elemen <section> */
 section {
-    width: 100%;
-    margin: 0;
-    padding: 10px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 50px;
+  width: 100%;
+  margin: 0;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 50px;
 }
 
 .tengahCenter {
-    width: 100%;
+  width: 100%;
 }
 
 .kolom {
-    margin-top: 20px;
-    margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 h1 {
-    color: #344646;
-    font-family: Inter;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: -1.6px;
+  color: #344646;
+  font-family: Inter;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -1.6px;
 }
 
-.wraper {
-    display: flex;
-    justify-content: center; /* Pusatkan secara horizontal */
-    align-items: center; /* Pusatkan secara vertikal jika diperlukan */
-    /* height: 100vh; */
+.square {
+  padding: 10px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  background-color: #FFE4D1;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.square:hover {
+  background-color: #FFB899;
 }
 
 .option {
-    margin-bottom: 20px;
-    padding: 10px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  background-color: transparent;
+  border: none;
 }
 
-.box {
-    display: inline-block;
-    padding: 5px 10px;
-    border: 2px solid #000; /* Warna border hitam */
-    border-radius: 5px; /* Sudut border membulat */
-    background-color: #f0f0f0; /* Warna latar belakang abu-abu terang */
-    text-decoration: none; /* Menghapus garis bawah pada link */
-    color: #000; /* Warna teks hitam */
-    margin-top: 10px; /* Menambahkan jarak 10px di atas kotak */
+.text-container {
+  flex-grow: 1;
 }
 
-/* Tambahkan gaya untuk link saat di-hover */
-.box:hover {
-    background-color: #e0e0e0;
-    border-color: #555;
+.ket p {
+  padding: 5px;
+  min-height: 20px;
+  white-space: normal;
+  word-wrap: break-word;
+  text-align: left;
+  line-break: 1.2;
+  margin-bottom: 5px;
 }
 
-/* Tambahkan gaya untuk link saat diklik */
-.box:active {
-    background-color: #ccc; 
-    border-color: #333; 
-} 
+.new-appointment {
+  margin-top: 20px;
+}
+
+.appointment-button {
+  padding: 10px 20px;
+  background-color: #FFFFFF;
+  color: #000;
+  border: 2px solid #8F2D2A;
+  border-radius: 5px;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none;
+}
+
+.appointment-button:hover {
+  background-color: #8F2D2A;
+  color: #FFFFFF;
+}
 
 .footer{
     width: 100%;

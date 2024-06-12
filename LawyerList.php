@@ -33,64 +33,57 @@ session_start();
             </div>
         </div>
     </nav>
+    
     <div class="wrapper">
         <section>
             <div class="tengahCenter">
                 <div class="kolom">
                     <h1>Our Consultant Team</h1>
                 </div>
-                <div class="square" onclick="window.location.href='Form_Create_Appoitment.php';>
-                    <div class=" option">
-                    <div class="lingkaran">
-                        <img src="Assets/Dara.jpg" alt="Consultant">
-                    </div>
+
+                <div class="square" onclick="window.location.href='Form_Create_Appoitment.php';">
+                    <div class="option">
+                        <div class="lingkaran">
+                            <img src="Assets/Dara.jpg" alt="Consultant">
+                        </div>
                     <div class="bio">
                         <p><b>Dara Finas Elen SH., MH </b></p>
                         <p>S1 at Universitas Brawijaya</p>
                         <p>S2 at Harvard University</p>
                         <p><b>IDR. 500.000/ 2 hours</b></p>
                     </div>
+                    </div>
+                </div>
+
+                <div class="square" onclick="window.location.href='Form_Create_Appoitment.php';">
+                    <div class=" option">
+                        <div class="lingkaran">
+                            <img src="Assets/Azkiya.jpg" alt="Consultant">
+                        </div>
+                    <div class="bio">
+                        <p><b>Nabila Azkiya Rosyida Wijayanti SH., MH </b></p>
+                        <p>S1 at Universitas Gadjah Mada</p>
+                        <p>S2 at Melbourne University</p>
+                        <p><b>IDR. 500.000/ 2 hours</b></p>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="square" onclick="window.location.href='Form_Create_Appoitment.php';">
+                    <div class=" option">
+                        <div class="lingkaran">
+                            <img src="Assets/Nadya.jpg" alt="Consultant">
+                        </div>
+                    <div class="bio">
+                        <p><b>Nadya Azzahara SH., MH </b></p>
+                        <p>S1 at Universitas Gadjah Mada</p>
+                        <p>S2 at Oxford University</p>
+                        <p><b>IDR. 500.000/ 2 hours</b></p>
+                    </div>
+                    </div>
                 </div>
             </div>
-            <div class="square" onclick="window.location.href='Form_Create_Appoitment.php';>
-                    <div class=" option">
-                <div class="lingkaran">
-                    <img src="Assets/Azkiya.jpg" alt="Consultant">
-                </div>
-                <div class="bio">
-                    <p><b>Nabila Azkiya Rosyida Wijayanti SH., MH </b></p>
-                    <p>S1 at Universitas Gadjah Mada</p>
-                    <p>S2 at Malbourne University</p>
-                    <p><b>IDR. 500.000/ 2 hours</b></p>
-                </div>
-            </div>
-            <div class="square" onclick="window.location.href='Form_Create_Appoitment.php';>
-                    <div class=" option">
-                <div class="lingkaran">
-                    <img src="Assets/Nadya.jpg" alt="Consultant">
-                </div>
-                <div class="bio">
-                    <p><b>Nadya Azzahara SH., MH </b></p>
-                    <p>S1 at Universitas Gadjah Mada</p>
-                    <p>S2 at Oxford University</p>
-                    <p><b>IDR. 500.000/ 2 hours</b></p>
-                </div>
-            </div>
-    </div>
-    <!-- <div class="square" onclick="window.location.href='Form_Create_Appoitment.php';>
-                    <div class=" option">
-        <div class="lingkaran">
-            <img src="Assets/Nadya.jpg" alt="Consultant">
-        </div>
-        <div class="bio">
-            <p><b>Nabila Azkiya Rosyida Wijayanti SH., MH </b></p>
-            <p>S1 at Universitas Gadjah Mada</p>
-            <p>S2 at Melbourne University</p>
-            <p><b>IDR. 500.000/ 2 hours</b></p>
-        </div>
-    </div> -->
-    </div>
-    </section>
+        </section>
     </div>
 
     <!-- Footer -->
