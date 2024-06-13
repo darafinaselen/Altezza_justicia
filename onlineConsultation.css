@@ -85,17 +85,17 @@ nav ul li a:hover{
 }
 
 .hai{
-    display: flex;
-    align-items: center;
-    margin-left: auto; 
-    text-align: right;
-    color: #344646;
-    font-family: Inter;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: -0.96px;
+  display: flex;
+  align-items: center;
+  margin-left: auto; 
+  text-align: right;
+  color: #344646;
+  font-family: Inter;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.96px;
 }
 
 .option{

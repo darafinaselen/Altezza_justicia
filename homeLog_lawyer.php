@@ -121,7 +121,7 @@ session_start();
     </div>
 
 
-        <div class="wrapper">
+    <div class="wrapper">
         <div class="footer">
             <div class="footer-section-logo">
                 <div class="logo-footer"><a href=""><img src="Assets/logo altezza 2.png" />Altezza Justicia</a></div>
@@ -173,4 +173,5 @@ session_start();
     </div>
 
 </body>
+
 </html>

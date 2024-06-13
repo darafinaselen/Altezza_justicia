@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Jun 2024 pada 12.52
+-- Waktu pembuatan: 13 Jun 2024 pada 09.55
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.2.4
 
@@ -59,17 +59,18 @@ CREATE TABLE `client` (
   `username` varchar(50) NOT NULL,
   `no_telpon` varchar(15) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `password` varchar(20) NOT NULL
+  `password` varchar(20) NOT NULL,
+  `foto` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `client`
 --
 
-INSERT INTO `client` (`id_client`, `username`, `no_telpon`, `email`, `password`) VALUES
-(1, 'Kuroko', '081345678767', 'kuroko@gmail.com', 'araara'),
-(2, 'rara', '087767891123', 'rara@gmail.com', 'doraemon'),
-(3, 'Dafilena Anastasya', '085233467788', 'dararari@gmail.com', 'dadargul');
+INSERT INTO `client` (`id_client`, `username`, `no_telpon`, `email`, `password`, `foto`) VALUES
+(1, 'Kuroko', '081345678767', 'kuroko@gmail.com', 'araara', '2376ac9455d970911f9246d7cc044eba.jpg'),
+(2, 'rara', '087767891123', 'rara@gmail.com', 'doraemon', 'aa63fd438b37e93a4ab999110de2c787.jpg'),
+(3, 'Dafilena Anastasya', '085233467788', 'dararari@gmail.com', 'dadargul', '');
 
 -- --------------------------------------------------------
 
@@ -79,12 +80,23 @@ INSERT INTO `client` (`id_client`, `username`, `no_telpon`, `email`, `password`)
 
 CREATE TABLE `lawyer` (
   `id_lawyer` varchar(20) NOT NULL,
-  `username` int(50) NOT NULL,
-  `password` int(11) NOT NULL,
-  `biaya` int(50) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `biaya` varchar(50) NOT NULL,
   `S1` varchar(100) NOT NULL,
-  `S2` varchar(100) NOT NULL
+  `S2` varchar(100) NOT NULL,
+  `foto` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `lawyer`
+--
+
+INSERT INTO `lawyer` (`id_lawyer`, `username`, `email`, `password`, `biaya`, `S1`, `S2`, `foto`) VALUES
+('ALTZ-LW-01', 'Dara Finas Elen SH., MH.', 'darafinas@lawyer.altezzajusticia', 'dafiel', 'IDR.500.000/2 hours', 'Universitas Brawijaya', 'Harvard University', ' '),
+('ALTZ-LW-02', 'Nabila Azkiya Rosyida Wijayanti SH., MH.', 'nabilazkiya@lawyer.altezzajusticia', 'skiyak', 'IDR.500.000/2 hours', 'Universitas Gadjah Mada', 'Malbourne University', ' '),
+('ALTZ-LW-03', 'Nadya Azzahra SH., MH.', 'nadyazzahraa@lawyer.altezzajusticia', 'neyday', 'IDR.500.000/2 hours', 'Universitas Gadjah Mada', 'Oxford University', ' ');
 
 -- --------------------------------------------------------
 
@@ -131,7 +143,8 @@ ALTER TABLE `client`
 -- Indeks untuk tabel `lawyer`
 --
 ALTER TABLE `lawyer`
-  ADD PRIMARY KEY (`id_lawyer`);
+  ADD PRIMARY KEY (`id_lawyer`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- Indeks untuk tabel `payment`

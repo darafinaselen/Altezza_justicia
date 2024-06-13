@@ -117,7 +117,7 @@ nav ul li a:hover{
 }
 
 h1{
-  padding: 5px;
+  padding: 5px 0;
   margin-bottom: 10px;
 }
 
@@ -156,9 +156,14 @@ h1{
 }
 
 .file-input {
-  margin-bottom: 5px;
+  /* margin-bottom: 5px;
   display: block;
-  margin: 0 auto;
+  margin: 0 auto; */
+
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .data {
@@ -176,6 +181,7 @@ h1{
 }
 
 .form-control {
+  margin-top: 5px;
   width: 100%;
   padding: 5px;
   border: 1px solid #ccc;

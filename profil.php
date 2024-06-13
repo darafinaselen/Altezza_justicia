@@ -5,6 +5,7 @@ require ('connect.php');
 $username = "";
 $email = "";
 $phone = "";
+$foto = "";
 
 if (!isset($_SESSION['id_client'])) {
     header("Location: Login.html");
@@ -18,21 +19,57 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $phone = $_POST['phone'];
 
-    $query_sql = "UPDATE client SET username = ?, email = ?, no_telpon = ? WHERE id_client = ?";
-    if ($stmt = $conn->prepare($query_sql)) {
-        $stmt->bind_param("sssi", $username, $email, $phone, $id_client);
-        if ($stmt->execute()) {
-            echo "<script>alert('Profil berhasil diperbarui.');</script>";
+    if (isset($_FILES['foto']) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
+        $fileTmpPath = $_FILES['foto']['tmp_name'];
+        $fileName = $_FILES['foto']['name'];
+        $fileSize = $_FILES['foto']['size'];
+        $fileType = $_FILES['foto']['type'];
+        $fileNameCmps = explode(".", $fileName);
+        $fileExtension = strtolower(end($fileNameCmps));
+
+        $newFileName = md5(time() . $fileName) . '.' . $fileExtension;
+
+        $uploadFileDir = './Uploads/';
+        $dest_path = $uploadFileDir . $newFileName;
+
+        $allowedfileExtensions = array('jpg', 'gif', 'png', 'jpeg');
+        if (in_array($fileExtension, $allowedfileExtensions)) {
+            if (move_uploaded_file($fileTmpPath, $dest_path)) {
+                $query_update = "UPDATE client SET username = ?, email = ?, no_telpon = ?, foto = ? WHERE id_client = ?";
+                if ($stmt_update = $conn->prepare($query_update)) {
+                    $stmt_update->bind_param("ssssi", $username, $email, $phone, $newFileName, $id_client);
+                    if ($stmt_update->execute()) {
+                        echo "<script>alert('Profil berhasil diperbarui.');</script>";
+                    } else {
+                        echo "Error updating profile: " . $stmt_update->error;
+                    }
+                    $stmt_update->close();
+                } else {
+                    echo "Error preparing update statement: " . $conn->error;
+                }
+            } else {
+                echo "Error moving the uploaded file.";
+            }
         } else {
-            echo "Error updating profile: " . $stmt->error;
+            echo "Upload failed. Allowed file types: " . implode(',', $allowedfileExtensions);
         }
-        $stmt->close();
     } else {
-        echo "Error preparing the statement: " . $conn->error;
+        $query_sql = "UPDATE client SET username = ?, email = ?, no_telpon = ? WHERE id_client = ?";
+        if ($stmt = $conn->prepare($query_sql)) {
+            $stmt->bind_param("sssi", $username, $email, $phone, $id_client);
+            if ($stmt->execute()) {
+                echo "<script>alert('Profil berhasil diperbarui.');</script>";
+            } else {
+                echo "Error updating profile: " . $stmt->error;
+            }
+            $stmt->close();
+        } else {
+            echo "Error preparing the statement: " . $conn->error;
+        }
     }
 }
 
-$query_sql = "SELECT username, email, no_telpon FROM client WHERE id_client = ?";
+$query_sql = "SELECT username, email, no_telpon, foto FROM client WHERE id_client = ?";
 if ($stmt = $conn->prepare($query_sql)) {
     $stmt->bind_param("i", $id_client);
     $stmt->execute();
@@ -42,6 +79,8 @@ if ($stmt = $conn->prepare($query_sql)) {
         $username = $row['username'];
         $email = $row['email'];
         $phone = $row['no_telpon'];
+        $foto = $row['foto'];
+
     } else {
         echo "Data pengguna tidak ditemukan.";
         exit();
@@ -85,10 +124,13 @@ $conn->close();
         <section id="YourProfile">
             <h1>Your Profile</h1>
             <div class="kotak">
-                <div class="fotoPro">
-                    <img id="profile-pic" class="profile-pic" src="path/to/default/profile-pic.jpg">
-                    <input type="file" id="file-input" class="file-input" accept="image/*">
-                </div>
+                <form method="POST" action="" enctype="multipart/form-data">
+                    <div class="fotoPro">
+                        <img id="profile-pic" class="profile-pic"
+                            src="Uploads/<?php echo htmlspecialchars($foto ?: 'default.jpg'); ?>" alt="Foto Profil">
+                        <!-- <input type="file" id="file-input" class="file-input" name="foto" accept="image/*"> -->
+                    </div>
+                </form>
                 <div class="data">
                     <p>Username: <?php echo htmlspecialchars($username); ?></p>
                     <p>Email: <?php echo htmlspecialchars($email); ?></p>
@@ -96,7 +138,8 @@ $conn->close();
                     <p>Client</p>
                 </div>
             </div>
-            <form method="POST" action="">
+            <h1>Edit Profile</h1>
+            <form method="POST" action="" enctype="multipart/form-data">
                 <div class="profile-info">
                     <div class="form-group">
                         <label for="nama">Nama:</label>
@@ -113,7 +156,11 @@ $conn->close();
                         <input type="tel" id="no_telp" name="phone" class="form-control"
                             value="<?php echo htmlspecialchars($phone); ?>" required>
                     </div>
-                    <button type="submit" id="simpan-perubahan" class="btn btn-primary">Simpan Perubahan</button>
+                    <div class="form-group">
+                        <label for="foto">Foto Profil:</label>
+                        <input type="file" id="file-input" class="form-control" name="foto" accept="image/*">
+                    </div>
+                    <button type="submit" id="simpan-perubahan" class="btn btn-primary">Simpan</button>
                 </div>
             </form>
         </section>
@@ -167,9 +214,9 @@ $conn->close();
 
     <script src="script.js"></script>
     <script>
-        document.getElementById('profile-pic').addEventListener('click', function () {
-            document.getElementById('file-input').click();
-        });
+        // document.getElementById('profile-pic').addEventListener('click', function () {
+        //     document.getElementById('file-input').click();
+        // });
 
         document.getElementById('file-input').addEventListener('change', function (event) {
             const file = event.target.files[0];

@@ -84,7 +84,8 @@ session_start();
                             <img src="Assets/Address.png">
                         </div>
                         <div class="ket">
-                            <p><a href="https://maps.app.goo.gl/iewZvPGtvCrmmuyKA" class="Address" id="">Nearest Law Office</a></p>
+                            <p><a href="https://maps.app.goo.gl/iewZvPGtvCrmmuyKA" class="Address" id="">Nearest Law
+                                    Office</a></p>
                         </div>
                     </div>
 
