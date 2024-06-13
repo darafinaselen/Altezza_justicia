@@ -58,6 +58,7 @@ $result = $conn->query($query);
                                         <p>S1 at ' . htmlspecialchars($row['S1']) . '</p>
                                         <p>S2 at ' . htmlspecialchars($row['S2']) . '</p>
                                         <p><b>IDR ' . htmlspecialchars($row['biaya']) . '/2 hours</b></p>
+                                        <a href="Form_Create_Appointment.php?id=' . htmlspecialchars($row['id_lawyer']) . '">Buat Janji dengan Konsultan</a>
                                     </div>
                                 </div>
                                </div>';

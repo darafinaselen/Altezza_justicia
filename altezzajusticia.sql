@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 13 Jun 2024 pada 09.55
+-- Waktu pembuatan: 13 Jun 2024 pada 17.51
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.2.4
 
@@ -68,9 +68,9 @@ CREATE TABLE `client` (
 --
 
 INSERT INTO `client` (`id_client`, `username`, `no_telpon`, `email`, `password`, `foto`) VALUES
-(1, 'Kuroko', '081345678767', 'kuroko@gmail.com', 'araara', '2376ac9455d970911f9246d7cc044eba.jpg'),
+(1, 'Kuroko', '081345678767', 'kuroko@gmail.com', 'araara', 'e6c12ca6606acfa1f957d47221c76454.jpg'),
 (2, 'rara', '087767891123', 'rara@gmail.com', 'doraemon', 'aa63fd438b37e93a4ab999110de2c787.jpg'),
-(3, 'Dafilena Anastasya', '085233467788', 'dararari@gmail.com', 'dadargul', '');
+(3, 'Dafilena Anastasya', '085233467788', 'dararari@gmail.com', 'dadargul', 'ae505192415f271da6c6b6dcb2bf7432.jpg');
 
 -- --------------------------------------------------------
 
@@ -79,7 +79,7 @@ INSERT INTO `client` (`id_client`, `username`, `no_telpon`, `email`, `password`,
 --
 
 CREATE TABLE `lawyer` (
-  `id_lawyer` varchar(20) NOT NULL,
+  `id_lawyer` int(20) NOT NULL,
   `username` varchar(100) NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` varchar(20) NOT NULL,
@@ -94,9 +94,9 @@ CREATE TABLE `lawyer` (
 --
 
 INSERT INTO `lawyer` (`id_lawyer`, `username`, `email`, `password`, `biaya`, `S1`, `S2`, `foto`) VALUES
-('ALTZ-LW-01', 'Dara Finas Elen SH., MH.', 'darafinas@lawyer.altezzajusticia', 'dafiel', 'IDR.500.000/2 hours', 'Universitas Brawijaya', 'Harvard University', ' '),
-('ALTZ-LW-02', 'Nabila Azkiya Rosyida Wijayanti SH., MH.', 'nabilazkiya@lawyer.altezzajusticia', 'skiyak', 'IDR.500.000/2 hours', 'Universitas Gadjah Mada', 'Malbourne University', ' '),
-('ALTZ-LW-03', 'Nadya Azzahra SH., MH.', 'nadyazzahraa@lawyer.altezzajusticia', 'neyday', 'IDR.500.000/2 hours', 'Universitas Gadjah Mada', 'Oxford University', ' ');
+(1, 'Dara Finas Elen SH., MH.', 'darafinas@lawyer.altezzajusticia', 'dafiel', '500.000', 'Universitas Brawijaya', 'Harvard University', '168890b4dd0550d4ab3e15c2b0fc75c6.jpg'),
+(2, 'Nabila Azkiya Rosyida Wijayanti SH., MH.', 'nabilazkiya@lawyer.altezzajusticia', 'skiyak', '500.000', 'Universitas Gadjah Mada', 'Melbourne University', '962570f9b95a412444b7e2148db99561.jpg'),
+(3, 'Nadya Azzahra SH., MH.', 'nadyazzahraa@lawyer.altezzajusticia', 'neyday', '500.000', 'Universitas Gadjah Mada', 'Harvard University', 'b614135aa2cda73f8852ae4acb871f0b.jpg');
 
 -- --------------------------------------------------------
 
@@ -144,7 +144,8 @@ ALTER TABLE `client`
 --
 ALTER TABLE `lawyer`
   ADD PRIMARY KEY (`id_lawyer`),
-  ADD UNIQUE KEY `email` (`email`);
+  ADD UNIQUE KEY `email` (`email`),
+  ADD UNIQUE KEY `email_2` (`email`);
 
 --
 -- Indeks untuk tabel `payment`
@@ -176,6 +177,12 @@ ALTER TABLE `appoitment`
 --
 ALTER TABLE `client`
   MODIFY `id_client` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT untuk tabel `lawyer`
+--
+ALTER TABLE `lawyer`
+  MODIFY `id_lawyer` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `payment`
