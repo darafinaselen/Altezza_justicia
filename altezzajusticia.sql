@@ -42,7 +42,7 @@ CREATE TABLE `admin` (
 
 CREATE TABLE `appoitment` (
   `id_appoitment` int(11) NOT NULL,
-  `kasus` varchar(10) NOT NULL,
+  `kasus` varchar(200) NOT NULL,
   `tanggal` date NOT NULL,
   `id_client` int(11) NOT NULL,
   `id_lawyer` int(11) NOT NULL

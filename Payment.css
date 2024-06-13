@@ -1,22 +1,19 @@
-*{
+* {
     text-decoration: none;
     margin: 0;
     padding: 0;
 }
 
-/* Mengatur tampilan dasar dari body */
-body{
-    margin: 0px;
-    padding: 0px;
+body {
+    margin: 0;
+    padding: 0;
     font-family: sans-serif;
 }
 
-/* Mengatur gaya untuk elemen nav (navigasi) */
-nav{
+nav {
     width: 100%;
     margin: auto;
     display: flex;
-    line-height: 10px;
     align-items: center;
     justify-content: center;
     position: sticky;
@@ -27,70 +24,151 @@ nav{
     margin-bottom: 20px;
 }
 
-/* Mengatur gaya untuk elemen dengan class wrapper di dalam nav */
-nav .wrapper{
+nav .wrapper {
     width: 100%;
     max-width: 1100px;
     margin: auto;
     display: flex;
     align-items: center;
-    position: relative;
     padding: 0 10px;
 }
 
-/* Mengatur gaya untuk elemen dengan class wrapper */
-.wrapper{
-    width: 1100px;
+.wrapper {
+    width: 100%;
+    max-width: 1100px;
     margin: auto;
-    position: relative;
+    padding: 20px;
+    background-color: #f9f9f9;
 }
 
-/* Mengatur gaya untuk elemen img di dalam elemen dengan class logo */
-.logo img{
+.logo img {
     width: 80px;
     height: auto;
 }
 
- /* Mengatur elemen dengan class "menu" menggunakan model flexbox */
- nav ul{
+nav ul {
     display: flex;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    /* overflow: hidden; */
 }
 
-/* Mengatur elemen <li> di dalam <ul> */
-nav ul li{
-    /* float: left; */
+nav ul li {
     margin-right: 20px;
 }
 
-/* Mengatur elemen <a> di dalam <li> */
-nav ul li a{
+nav ul li a {
     color: black;
     font-weight: bold;
     text-align: center;
-    padding: 0px 16px 0px 16px;
-    text-decoration: none;
+    padding: 0 16px;
 }
 
-/* Mengatur elemen <a> saat pengguna mengarahkan kursor (hover) */
-nav ul li a:hover{
-    text-decoration: none;
+nav ul li a:hover {
     color: #8F2D2A;
 }
 
-.hai{
+.hai {
     display: flex;
     align-items: center;
-    margin-left: auto; 
+    margin-left: auto;
     text-align: right;
     color: #344646;
-    font-family: Inter;
-    font-size: 48px;
-    font-style: normal;
+    font-family: Inter, sans-serif;
+    font-size: 18px;
     font-weight: 700;
-    line-height: normal;
-    letter-spacing: -0.96px;
+}
+.wrapper {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.option {
+    text-align: left;
+}
+
+.option h1 {
+    font-size: 26px;
+    margin-bottom: 26px;
+    color: #000;
+}
+
+.option p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+#p1, #p3, #p5 {
+    font-weight: bold;
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 16px;
+}
+
+#p2, #p4 {
+    color: #000;
+    margin-bottom: 26px;
+}
+
+.payment-methods {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    position: relative;
+}
+
+.payment-method:hover {
+    background-color: #f5f5f5;
+}
+
+.payment-method img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.payment-method span {
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 20px;
+}
+
+.account-info {
+    font-size: 16px;
+    color: #333;
+    left: 40px; 
+}
+
+.payment-method.selected {
+    background-color: #e0e0e0;
+    border-color: #8F2D2A;
+}
+
+.note {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.note p {
+    margin: 0;
 }

@@ -48,31 +48,27 @@ $result = $conn->query($query);
                 <?php
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
-                        echo '<div class="square" onclick="redirectToAppointment(' . $row['id_lawyer'] . ');">
-                                <div class="option">
-                                    <div class="lingkaran">
-                                        <img src="Uploads/' . htmlspecialchars($row['foto']) . '" alt="Consultant">
-                                    </div>
-                                    <div class="bio">
-                                        <p><b>' . htmlspecialchars($row['username']) . '</b></p>
-                                        <p>S1 at ' . htmlspecialchars($row['S1']) . '</p>
-                                        <p>S2 at ' . htmlspecialchars($row['S2']) . '</p>
-                                        <p><b>IDR ' . htmlspecialchars($row['biaya']) . '/2 hours</b></p>
-                                        <a href="Form_Create_Appointment.php?id=' . htmlspecialchars($row['id_lawyer']) . '">Buat Janji dengan Konsultan</a>
-                                    </div>
-                                </div>
-                               </div>';
+                        echo '<div class="square">';
+                        echo '<div class="option" onclick="window.location.href=\'Form_Create_Appoitment.php?id=' . $row['id_lawyer'] . '\'">';
+                        echo '<div class="lingkaran">';
+                        echo '<img src="Uploads/' . htmlspecialchars($row['foto']) . '" alt="Consultant">';
+                        echo '</div>';
+                        echo '<div class="bio">';
+                        echo '<p><b>' . htmlspecialchars($row['username']) . '</b></p>';
+                        echo '<p>S1 at ' . htmlspecialchars($row['S1']) . '</p>';
+                        echo '<p>S2 at ' . htmlspecialchars($row['S2']) . '</p>';
+                        echo '<p><b>IDR ' . htmlspecialchars($row['biaya']) . '/2 hours</b></p>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '</div>';
                     }
                 } else {
                     echo '<p>No lawyers found.</p>';
                 }
-                ?>
 
-                <script>
-                    function redirectToAppointment(id_lawyer) {
-                        window.location.href = 'Form_Create_Appointment.php?id=' + id_lawyer;
-                    }
-                </script>
+                // Menutup koneksi database setelah selesai digunakan
+                $conn->close();
+                ?>
             </div>
         </section>
     </div>

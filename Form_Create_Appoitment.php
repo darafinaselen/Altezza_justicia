@@ -1,31 +1,83 @@
 <?php
 session_start();
+require ('connect.php');
 
-// function getLawyerNameById($conn, $id_lawyer)
-// {
-//     $sql = "SELECT username FROM lawyers WHERE id_lawyer = ?";
-//     $stmt = $conn->prepare($sql);
-//     $stmt->bind_param("i", $id_lawyer);
-//     $stmt->execute();
-//     $result = $stmt->get_result();
+function getLawyerNameById($conn, $id_lawyer)
+{
+    $sql = "SELECT username FROM lawyer WHERE id_lawyer = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $id_lawyer);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        return $row['username'];
+    } else {
+        return "Consultant Not Found";
+    }
+}
 
-//     if ($result->num_rows > 0) {
-//         $row = $result->fetch_assoc();
-//         return $row['username']; // Mengembalikan nama konsultan dari database
-//     } else {
-//         return "Consultant Not Found"; // Handle jika konsultan tidak ditemukan
-//     }
-// }
+function getClientInfoById($conn, $id_client)
+{
+    $sql = "SELECT username, email, no_telpon FROM client WHERE id_client = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $id_client);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    if ($result->num_rows > 0) {
+        return $result->fetch_assoc();
+    } else {
+        return null;
+    }
+}
 
-// if (isset($_GET['id'])) {
-//     $_SESSION['id_lawyer'] = $_GET['id'];
-//     $_SESSION['consultant_name'] = getLawyerNameById($conn, $_GET['id']); // Pastikan fungsi ini mengembalikan nama lawyer dari database
-// } else if (!isset($_SESSION['id_lawyer'])) {
-//     // Redirect to LawyerList.php or any other appropriate page if id_lawyer is not set in session
-//     header("Location: LawyerList.php");
-//     exit();
-// }
+if (!isset($_SESSION['username'])) {
+    header("Location: Login.html");
+    exit();
+}
 
+if (isset($_GET['id'])) {
+    $id_lawyer = $_GET['id'];
+    $_SESSION['id_lawyer'] = $id_lawyer;
+    $lawyer_name = getLawyerNameById($conn, $id_lawyer);
+    // $_SESSION['username'] = $lawyer_name;
+} elseif (isset($_SESSION['id_lawyer'])) {
+    $id_lawyer = $_SESSION['id_lawyer'];
+    $lawyer_name = getLawyerNameById($conn, $id_lawyer);
+    echo '<input type="text" name="lawyer" id="lawyer" value="' . htmlspecialchars($lawyer_name) . '" readonly>';
+} else {
+    header("Location: LawyerList.php");
+    exit();
+}
+
+$id_client = $_SESSION['id_client'];
+$client_info = getClientInfoById($conn, $id_client);
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $kasus = $_POST['kasus'] ?? '';
+    $tanggal = $_POST['tanggal'] ?? '';
+
+    // // Debug statements
+    // echo "Kasus: " . htmlspecialchars($kasus) . "<br>";
+    // echo "Tanggal: " . htmlspecialchars($tanggal) . "<br>";
+
+    if (!empty($kasus) && !empty($tanggal)) {
+        $sql = "INSERT INTO appoitment (kasus, tanggal, id_client, id_lawyer) VALUES (?, ?, ?, ?)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ssii", $kasus, $tanggal, $id_client, $id_lawyer);
+
+        if ($stmt->execute()) {
+            echo '<script>
+                    alert("Appointment created successfully!");
+                    window.location.href = "Payment.php";
+                  </script>';
+        } else {
+            echo "<script>alert('Error: " . $stmt->error . "');</script>";
+        }
+    } else {
+        echo "<script>alert('Please fill in all fields.');</script>";
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -65,47 +117,44 @@ session_start();
         <section class="create-appointment">
             <h1>Create an Appointment With Your Law Consultant</h1>
             <p>Please Fill this Form</p>
-            <form action="Payment.php" method="post" id="appointmentForm">
+            <form action="" method="post" id="appointmentForm">
 
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="consultant">Your Consultant:</label>
-                    <?php
-                    if (isset($_SESSION['consultant_name'])) {
-                        echo '<span>' . htmlspecialchars($_SESSION['consultant_name']) . '</span>';
-                    } else {
-                        echo '<span></span>';
-                    }
-                    ?>
+                </div> -->
+
+                <div class="form-group">
+                    <label for="lawyer">Your Consultant</label>
+                    <input type="text" name="lawyer" id="lawyer" value="<?php echo htmlspecialchars($lawyer_name); ?>"
+                        readonly>
                 </div>
 
                 <div class="form-group">
-                    <label for="firstName">First Name</label>
-                    <input type="text" name="firstName" id="firstName" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="lastName">Last Name</label>
-                    <input type="text" name="lastName" id="lastName" required>
+                    <label for="username">Your Name</label>
+                    <input type="text" name="username" id="username"
+                        value="<?php echo htmlspecialchars($client_info['username']); ?>" readonly>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" name="email" id="email" required>
+                    <input type="email" name="email" id="email"
+                        value="<?php echo htmlspecialchars($client_info['email']); ?>" readonly>
                 </div>
 
                 <div class="form-group">
                     <label for="phone">Phone Number or WhatsApp</label>
-                    <input type="tel" name="phone" id="phone" required>
+                    <input type="tel" name="phone" id="phone"
+                        value="<?php echo htmlspecialchars($client_info['no_telpon']); ?>" readonly>
                 </div>
 
                 <div class="form-group">
                     <label for="date">Appointment Date and Time:</label>
-                    <input type="datetime-local" id="date" name="date" required>
+                    <input type="datetime-local" id="tanggal" name="tanggal" required>
                 </div>
 
                 <div class="form-group">
                     <label for="case">Your Case (max 150 char)</label>
-                    <textarea name="case" id="case" maxlength="150" required></textarea>
+                    <textarea name="kasus" id="kasus" maxlength="150" required></textarea>
                 </div>
 
                 <div class="form-group">
