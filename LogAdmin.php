@@ -66,7 +66,7 @@ session_start();
                             <img src="Assets/Ask Question.png">
                         </div>
                         <div class="ket">
-                            <p><a href="activity.php" class="Ask" id="">Activity</a></p>
+                            <p><a href="activity1.php" class="Ask" id="">Activity</a></p>
                         </div>
                     </div>
                 </div>

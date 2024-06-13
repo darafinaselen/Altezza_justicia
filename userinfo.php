@@ -1,23 +1,3 @@
-<?php
-session_start();
-
-// Database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "altezzajusticia";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Fetch all appointments
-$sql = "SELECT * FROM appointment_db";
-$result = $conn->query($sql);
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,26 +8,28 @@ $result = $conn->query($sql);
 </head>
 
 <body>
-<nav>
-    <div class="wrapper">
-        <div class="logo"><a href=""><img src="Assets/logo altezza 2.png" alt="Logo"></a></div>
-        <div class="menu">
-            <ul>
-                <li><a href="admin.html">Home</a> <b> > </b> </li>
-                <li><a href="LawyerList.php">Lawyer List</a></li>
-            </ul>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href=""><img src="Assets/logo altezza 2.png"></a></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="LogAdmin.php">Home</a></li>
+                    <!-- <li><a href="#artikel">Artikel</a></li> -->
+                </ul>
+            </div>
+            <div class="hai">
+                <?php
+                if (isset($_SESSION['username'])) {
+                    echo '<span class="welcome">Hai, ' . htmlspecialchars($_SESSION['username']) . '!</span>';
+                } else {
+                    echo '<a href="admin.html" class="masuk" id="">Login</a>';
+                }
+                ?>
+            </div>
         </div>
-        <div class="hai">
-            <?php
-            if (isset($_SESSION['username'])) {
-                echo '<span class="welcome">Hai, ' . htmlspecialchars($_SESSION['username']) . '!</span>';
-            } else {
-                echo '<a href="Login.html" class="masuk">Login</a>';
-            }
-            ?>
-        </div>
-    </div>
-</nav>
+    </nav>
+
+
 <div class="wrapper">
     <section>
         <div class="tengahCenter">
@@ -93,7 +75,6 @@ $result = $conn->query($sql);
     </section>
 </div>
 
-<!-- Footer dan lainnya di sini -->
 </body> 
 </html>
 
