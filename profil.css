@@ -1,0 +1,285 @@
+/* Mengatur semua elemen agar tidak ada dekorasi teks, margin dan padding 0, dan menggunakan box-sizing border-box */
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Mengatur tampilan dasar dari body */
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+/* Mengatur gaya untuk elemen nav (navigasi) */
+nav {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    line-height: 10px;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    background: #FFFFFF;
+    z-index: 1;
+    border-bottom: 1px solid #8F2D2A;
+    margin-bottom: 20px;
+}
+
+/* Mengatur gaya untuk elemen dengan class wrapper di dalam nav */
+nav .wrapper {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 10px;
+}
+
+/* Mengatur gaya untuk elemen dengan class wrapper */
+.wrapper {
+    width: 1100px;
+    margin: auto;
+    position: relative;
+}
+
+/* Mengatur gaya untuk elemen img di dalam elemen dengan class logo */
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+/* Mengatur elemen dengan class "menu" menggunakan model flexbox */
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Mengatur elemen <li> di dalam <ul> */
+nav ul li {
+    margin-right: 20px;
+}
+
+/* Mengatur elemen <a> di dalam <li> */
+nav ul li a {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding: 0px 16px 0px 16px;
+    text-decoration: none;
+}
+
+/* Mengatur elemen <a> saat pengguna mengarahkan kursor (hover) */
+nav ul li a:hover {
+    text-decoration: none;
+    color: #8F2D2A;
+}
+
+/* Mengatur elemen dengan class "logout" menggunakan model flexbox */
+.logout {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+/* Mengatur gaya untuk elemen dengan class "keluar" */
+.keluar {
+    background: #8F2D2A;
+    border-radius: 8px;
+    padding: 10px 15px 10px 15px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    cursor: pointer;
+}
+
+/* Mengatur gaya elemen dengan class "keluar" saat pengguna mengarahkan kursor (hover) */
+.keluar:hover {
+    text-decoration: none;
+    background-color: #E3A2A0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    padding: 5px 0;
+    margin-bottom: 10px;
+}
+
+.kotak {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFE4D1;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.fotoPro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #FFE4D1;
+    background-image: url('https://i.pinimg.com/736x/0d/64/98/0d64989794b1a4c9d89bff571d3d5842.jpg');
+    background-size: cover;
+    background-position: center;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.file-input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.data {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.data p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.profile-info {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-control {
+    margin-top: 5px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #8F2D2A;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    border-top: 1px solid #8F2D2A;
+    padding: 30px;
+}
+
+.logo-footer img {
+    width: 20%;
+    height: auto;
+    display: flex;
+}
+
+.logo-footer a {
+    display: flex;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 400;
+    color: black;
+    font-style: normal;
+    line-height: 150%;
+    align-items: center;
+}
+
+.logo-footer {
+    display: flex;
+    align-items: center;
+}
+
+.iconMedsos {
+    padding: 30px 0px 30px 10px;
+    display: flex;
+}
+
+.footer-section-logo ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.footer-section-logo img {
+    padding-right: 10px;
+}
+
+.footer-section-menu {
+    padding: 15px 20px 15px 100px;
+    display: flex;
+}
+
+.topic ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+}
+
+.topic ul li a {
+    text-decoration: none;
+    color: black;
+    font-family: Inter;
+    font-size: 16px;
+    padding: 5px 0px;
+    display: block;
+}
+
+.item {
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0 50px;
+}
+
+.item h4 {
+    padding: 10px;
+    font-family: Inter;
+    font-size: 16px;
+}

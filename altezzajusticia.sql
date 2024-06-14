@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jun 12, 2024 at 08:14 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.0.28
+-- Host: 127.0.0.1
+-- Waktu pembuatan: 13 Jun 2024 pada 17.51
+-- Versi server: 10.4.28-MariaDB
+-- Versi PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,27 +24,20 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+-- Struktur dari tabel `admin`
 --
 
 CREATE TABLE `admin` (
   `id_admin` int(11) NOT NULL,
-  `username` varchar(50) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `password` varchar(50) NOT NULL
+  `username` int(50) NOT NULL,
+  `email` int(50) NOT NULL,
+  `password` int(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `admin`
---
-
-INSERT INTO `admin` (`id_admin`, `username`, `email`, `password`) VALUES
-(1, 'nayaimut', 'nay@gmail.com', 'fff');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `appoitment`
+-- Struktur dari tabel `appoitment`
 --
 
 CREATE TABLE `appoitment` (
@@ -58,42 +51,57 @@ CREATE TABLE `appoitment` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `client`
+-- Struktur dari tabel `client`
 --
 
 CREATE TABLE `client` (
   `id_client` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
+  `no_telpon` varchar(15) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `password` varchar(8) NOT NULL
+  `password` varchar(20) NOT NULL,
+  `foto` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `client`
+-- Dumping data untuk tabel `client`
 --
 
-INSERT INTO `client` (`id_client`, `username`, `email`, `password`) VALUES
-(1, 'kuroko', 'kuroko@gmail.com', 'araara');
+INSERT INTO `client` (`id_client`, `username`, `no_telpon`, `email`, `password`, `foto`) VALUES
+(1, 'Kuroko', '081345678767', 'kuroko@gmail.com', 'araara', 'e6c12ca6606acfa1f957d47221c76454.jpg'),
+(2, 'rara', '087767891123', 'rara@gmail.com', 'doraemon', 'aa63fd438b37e93a4ab999110de2c787.jpg'),
+(3, 'Dafilena Anastasya', '085233467788', 'dararari@gmail.com', 'dadargul', 'ae505192415f271da6c6b6dcb2bf7432.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lawyer`
+-- Struktur dari tabel `lawyer`
 --
 
 CREATE TABLE `lawyer` (
-  `id_lawyer` int(11) NOT NULL,
-  `username` int(50) NOT NULL,
-  `password` int(11) NOT NULL,
-  `biaya` int(50) NOT NULL,
+  `id_lawyer` int(20) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `biaya` varchar(50) NOT NULL,
   `S1` varchar(100) NOT NULL,
-  `S2` varchar(100) NOT NULL
+  `S2` varchar(100) NOT NULL,
+  `foto` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `lawyer`
+--
+
+INSERT INTO `lawyer` (`id_lawyer`, `username`, `email`, `password`, `biaya`, `S1`, `S2`, `foto`) VALUES
+(1, 'Dara Finas Elen SH., MH.', 'darafinas@lawyer.altezzajusticia', 'dafiel', '500.000', 'Universitas Brawijaya', 'Harvard University', '168890b4dd0550d4ab3e15c2b0fc75c6.jpg'),
+(2, 'Nabila Azkiya Rosyida Wijayanti SH., MH.', 'nabilazkiya@lawyer.altezzajusticia', 'skiyak', '500.000', 'Universitas Gadjah Mada', 'Melbourne University', '962570f9b95a412444b7e2148db99561.jpg'),
+(3, 'Nadya Azzahra SH., MH.', 'nadyazzahraa@lawyer.altezzajusticia', 'neyday', '500.000', 'Universitas Gadjah Mada', 'Harvard University', 'b614135aa2cda73f8852ae4acb871f0b.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `payment`
+-- Struktur dari tabel `payment`
 --
 
 CREATE TABLE `payment` (
@@ -111,13 +119,13 @@ CREATE TABLE `payment` (
 --
 
 --
--- Indexes for table `admin`
+-- Indeks untuk tabel `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id_admin`);
 
 --
--- Indexes for table `appoitment`
+-- Indeks untuk tabel `appoitment`
 --
 ALTER TABLE `appoitment`
   ADD PRIMARY KEY (`id_appoitment`),
@@ -125,19 +133,22 @@ ALTER TABLE `appoitment`
   ADD KEY `fk_lawyer_appoitment` (`id_lawyer`);
 
 --
--- Indexes for table `client`
+-- Indeks untuk tabel `client`
 --
 ALTER TABLE `client`
-  ADD PRIMARY KEY (`id_client`);
+  ADD PRIMARY KEY (`id_client`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
--- Indexes for table `lawyer`
+-- Indeks untuk tabel `lawyer`
 --
 ALTER TABLE `lawyer`
-  ADD PRIMARY KEY (`id_lawyer`);
+  ADD PRIMARY KEY (`id_lawyer`),
+  ADD UNIQUE KEY `email` (`email`),
+  ADD UNIQUE KEY `email_2` (`email`);
 
 --
--- Indexes for table `payment`
+-- Indeks untuk tabel `payment`
 --
 ALTER TABLE `payment`
   ADD PRIMARY KEY (`id_payment`),
@@ -146,65 +157,55 @@ ALTER TABLE `payment`
   ADD KEY `fk_admin_payment` (`id_admin`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `admin`
+-- AUTO_INCREMENT untuk tabel `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `appoitment`
+-- AUTO_INCREMENT untuk tabel `appoitment`
 --
 ALTER TABLE `appoitment`
   MODIFY `id_appoitment` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `client`
+-- AUTO_INCREMENT untuk tabel `client`
 --
 ALTER TABLE `client`
-  MODIFY `id_client` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_client` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `lawyer`
+-- AUTO_INCREMENT untuk tabel `lawyer`
 --
 ALTER TABLE `lawyer`
-  MODIFY `id_lawyer` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_lawyer` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `payment`
+-- AUTO_INCREMENT untuk tabel `payment`
 --
 ALTER TABLE `payment`
   MODIFY `id_payment` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `appoitment`
+-- Ketidakleluasaan untuk tabel `appoitment`
 --
 ALTER TABLE `appoitment`
-  ADD CONSTRAINT `fk_client_appoitment` FOREIGN KEY (`id_client`) REFERENCES `client` (`id_client`),
-  ADD CONSTRAINT `fk_lawyer_appoitment` FOREIGN KEY (`id_lawyer`) REFERENCES `lawyer` (`id_lawyer`);
+  ADD CONSTRAINT `fk_client_appoitment` FOREIGN KEY (`id_client`) REFERENCES `client` (`id_client`);
 
 --
--- Constraints for table `payment`
+-- Ketidakleluasaan untuk tabel `payment`
 --
 ALTER TABLE `payment`
   ADD CONSTRAINT `fk_admin_payment` FOREIGN KEY (`id_admin`) REFERENCES `admin` (`id_admin`),
-  ADD CONSTRAINT `fk_client_payment` FOREIGN KEY (`id_client`) REFERENCES `client` (`id_client`),
-  ADD CONSTRAINT `fk_lawyer_payment` FOREIGN KEY (`id_lawyer`) REFERENCES `lawyer` (`id_lawyer`);
-COMMIT;
-
-CREATE TABLE `articleDB` (
-  `id` int(11) NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `content` text NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  ADD CONSTRAINT `fk_client_payment` FOREIGN KEY (`id_client`) REFERENCES `client` (`id_client`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
