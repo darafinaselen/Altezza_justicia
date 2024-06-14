@@ -1,5 +1,15 @@
 <?php
 session_start();
+
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "altezzajusticia";
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 ?>
 
 <!DOCTYPE html>
@@ -80,35 +90,28 @@ session_start();
                 </div>
 
                 <div class="artikelBox">
-                    <div class="box">
-                        <div class="boxAtas">
-                            <img src="https://duniadosen.com/wp-content/uploads/2017/07/hak-atas-kekayaan-intelektual.jpg">
-                        </div>
-                        <div class="boxBawah">
-                            <p><a href="https://duniadosen.com/hak-kekayaan-intelektual-memperkuat-menghadapi-masyarakat-ekonomi-asia/"><h4>Hak Kekayaan Intelektual Memperkuat Menghadapi Masyarakat Ekonomi Asia</h4>
-                            <br>Pentingnya Hak Kekayaan Intelektual (HKI) di kancah MEA (Masyarakat Ekonomi Asia) terus diperkenalkan. Tujuannya agar Indonesia tidak menjadi penontong di negara sendiri...read more</a></p>
-                        </div>
-                    </div>
+                    <?php
+                    // Fetch the 3 latest articles from database
+                    $sql = "SELECT id, title, content, photo FROM articleDB ORDER BY created_at DESC LIMIT 3";
+                    $result = $conn->query($sql);
 
-                    <div class="box">
-                        <div class="boxAtas">
-                            <img src="https://images.hukumonline.com/frontend/lt4fc583987ab36/lt4fc63a4de32b2.jpg">
-                        </div>
-                        <div class="boxBawah">
-                            <p><a href="https://www.hukumonline.com/berita/a/tabrak-peraturan--kontrak-batal-demi-hukum-lt4fc583987ab36"><h4>Tabrak Peraturan, Kontrak Batal Demi Hukum</h4>
-                            <br>Perjanjian kerjasama yang tertuang dalam kontrak seharusnya batal demni hukum jika substansi kontrak itu bertentangan dengan peraturan...read more</a></p>
-                        </div>
-                    </div>
-
-                    <div class="box">
-                        <div class="boxAtas">
-                            <img src="https://asset.kompas.com/crops/KNdP3s4Lvhlhn0nDA2NUge2kb1w=/195x0:780x390/1200x800/data/photo/2014/12/15/1236290Palu780x390.jpg">
-                        </div>
-                        <div class="boxBawah">
-                            <p><a href="https://money.kompas.com/read/2021/09/02/140317126/mk-tegaskan-eksekusi-jaminan-fidusia-lewat-pengadilan-hanya-alternatif"><h4>MK Tegaskan Eksekusi Jaminan Fidusia lewat Pengadilan Hanya Alternatif</h4>
-                            <br>Mahkamah Konstitusi (MK) menegaskan, eksekusi sertifikat jaminan fidusia melalui pengadilan...read more</a></p>
-                        </div>
-                    </div>
+                    if ($result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            echo '<div class="box">';
+                            echo '<div class="boxAtas">';
+                            echo '<img src="' . htmlspecialchars($row['photo']) . '">';
+                            echo '</div>';
+                            echo '<div class="boxBawah">';
+                            echo '<p><a href="' . htmlspecialchars($row['content']) . '">';
+                            echo '<h4>' . htmlspecialchars($row['title']) . '</h4>';
+                            echo '<br>' . substr(htmlspecialchars($row['content']), 0, 100) . '...read more</a></p>';
+                            echo '</div>';
+                            echo '</div>';
+                        }
+                    } else {
+                        echo "No articles found.";
+                    }
+                    ?>
                 </div>
             </section>
     </div>
@@ -124,7 +127,6 @@ session_start();
                         <li><img src="Assets/IconYtb.svg" alt=""></li>
                         <li><img src="Assets/IconInstg.svg" alt=""></li>
                     </ul>
-
                 </div>
             </div>
             <div class="footer-section-menu">
@@ -160,13 +162,11 @@ session_start();
                         </ul>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
 </body>
 
 </html>
+
+<?php $conn->close(); ?>
