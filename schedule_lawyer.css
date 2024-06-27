@@ -160,38 +160,50 @@ p.tengah {
     align-items: center;
     width: auto;
     margin: 10px; 
-    padding: 10px;
+    padding: 0 30px;
     text-align: center;
     /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 
 .lingkaran {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 150px; 
-    height: 150px;
-    border-radius: 50%;
-    background-color: #E3A2A0;
-    overflow: hidden; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px; 
+  height: auto;
+  border-radius: 50%;
+  background-color: #E3A2A0;
+  overflow: hidden; 
+  aspect-ratio: 1 / 1;
 }
 
+
+
 .lingkaran img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; /* Ensures the image itself is also circular */
+}
+
 
 .bio {
-    flex: 1; 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+  margin: 0 auto;
 }
 
 .bio p {
-    margin: 10px 0; 
+    margin: 5px 0; 
     font-family: Inter;
     font-size: 20px; 
     color: #344646;
-    align-items: center;
+    align-items: justify;
     padding: 5px;
     margin-left: 10px;
 }

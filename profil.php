@@ -132,9 +132,9 @@ $conn->close();
                     </div>
                 </form>
                 <div class="data">
-                    <p>Username: <?php echo htmlspecialchars($username); ?></p>
-                    <p>Email: <?php echo htmlspecialchars($email); ?></p>
-                    <p>No Telpon: <?php echo htmlspecialchars($phone); ?></p>
+                    <p><?php echo htmlspecialchars($username); ?></p>
+                    <p><?php echo htmlspecialchars($email); ?></p>
+                    <p><?php echo htmlspecialchars($phone); ?></p>
                     <p>Client</p>
                 </div>
             </div>

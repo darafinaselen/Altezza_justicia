@@ -75,7 +75,7 @@ session_start();
                             <img src="Assets/Ask Question.png">
                         </div>
                         <div class="ket">
-                            <p><a href="" class="Ask" id="">Information</a></p>
+                            <p><a href="#artikel" class="Ask" id="">Article</a></p>
                         </div>
                     </div>
 
@@ -84,8 +84,7 @@ session_start();
                             <img src="Assets/Address.png">
                         </div>
                         <div class="ket">
-                            <p><a href="https://maps.app.goo.gl/iewZvPGtvCrmmuyKA" class="Address" id="">Nearest Law
-                                    Office</a></p>
+                            <p><a href="https://maps.app.goo.gl/iewZvPGtvCrmmuyKA" class="Address" id="">Office</a></p>
                         </div>
                     </div>
 
